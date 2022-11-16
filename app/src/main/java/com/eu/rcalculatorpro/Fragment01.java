@@ -31,6 +31,7 @@ public class Fragment01 extends Fragment {
     Spinner spinner01;
     List<String> name01;
     int convert;
+    int x;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -112,240 +113,189 @@ public class Fragment01 extends Fragment {
 
 
             double y = Double.parseDouble(editText01.getText().toString());
-            double x = s * y;
+            double a = s * y;
 
-            if (x < 10) {
 
-                //pour les valeurs improbable
-                if (x != 2.2 && x != 3.3 && x != 1 && x != 0.47 && x != 4.7 && x != 2.5) {
-                    System.out.println("valeur improbable!!");
-                } else {
+            double num3 = a * 100;
+            double num2 = a * 10;
+            double num1 = a;
 
-                    if (x == 0.47) System.out.println("jaune violet argent");
-                    if (x == 1) System.out.println("marron noir noir ");
-                    if (x == 2.2) System.out.println("rouge rouge or or");
-                    if (x == 2.5) System.out.println("rouge vert or");
-                    if (x == 3.3) System.out.println("orange orange noir");
-                    if (x == 4.7) System.out.println("jaune violet noir");
+            Double[] digitss = getDigits(Double.toString(num1));
+            Double[] digits = getDigits(Double.toString(num2));
+            Double[] digit = getDigits(Double.toString(num3));
+
+
+
+
+
+            if (a < 1) {
+                Double b1 = digit[0];
+                if (b1 == 1) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                } else if (b1 == 2) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
+                } else if (b1 == 3) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
+                } else if (b1 == 4) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
+                } else if (b1 == 5) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
+                } else if (b1 == 6) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
+                } else if (b1 == 7) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
+                } else if (b1 == 8) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                } else if (b1 == 9) {
+                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
                 }
 
 
-            } else {
+                try {
 
-                int a = (int) Math.round(x);
 
-                Integer num1 = a;
-                Integer[] digitss = getDigits(num1.toString());
+
+                    Double nbre1 = digit[1];
+
+                      if (nbre1 ==null) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
+                    }
+                       else if (nbre1 == 1) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                    } else if (nbre1 == 2) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                    } else if (nbre1 == 3) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                    } else if (nbre1 == 4) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                    } else if (nbre1 == 5) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                    } else if (nbre1 == 6) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                    } else if (nbre1 == 7) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                    } else if (nbre1 == 8) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                    } else if (nbre1 == 9) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+                    }
+
+
+                } catch (Exception ee) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));                }
+
+
+            }
+            Double b1 = digitss[0];
+            if (b1 == 1) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
+            } else if (b1 == 2) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
+            } else if (b1 == 3) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
+            } else if (b1 == 4) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
+            } else if (b1 == 5) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
+            } else if (b1 == 6) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
+            } else if (b1 == 7) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
+            } else if (b1 == 8) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
+            } else if (b1 == 9) {
+                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
+            }
+            try {
                 if (a < 10) {
 
-                    int b1 = digitss[0];
-                    switch (b1) {
-                        case 1:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                            break;
-                        case 2:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-                            break;
-                        case 3:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
-                            break;
-                        case 4:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
-                            break;
-                        case 5:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
-                            break;
-                        case 6:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
-                            break;
-                        case 7:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
-                            break;
-                        case 8:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                            break;
-                        case 9:
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                            break;
+                    Double nbre1 = digits[1];
+                     if (nbre1 == null) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
+                    }
+                   else if (nbre1 == 1) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                    } else if (nbre1 == 2) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                    } else if (nbre1 == 3) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                    } else if (nbre1 == 4) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                    } else if (nbre1 == 5) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                    } else if (nbre1 == 6) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                    } else if (nbre1 == 7) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                    } else if (nbre1 == 8) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                    } else if (nbre1 == 9) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
                     }
 
-
-                } else {
-
-
-                    if (a > 10 && a < 100) {
-                        int nbre04 = digitss[0];
-
-                        switch (nbre04) {
-                            case 1:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                                break;
-                            case 2:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-                                break;
-                            case 3:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
-                                break;
-                            case 4:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
-                                break;
-                            case 5:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
-                                break;
-                            case 6:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
-                                break;
-                            case 7:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
-                                break;
-                            case 8:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                                break;
-                            case 9:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                                break;
-                        }
-                        // 2eme bande
-                        int nbre1 = digitss[1];
-                        switch (nbre1) {
-                            case 1:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                                break;
-                            case 2:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
-                                break;
-                            case 3:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
-                                break;
-                            case 4:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
-                                break;
-                            case 5:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
-                                break;
-                            case 6:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
-                                break;
-                            case 7:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
-                                break;
-                            case 8:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                                break;
-                            case 9:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                                break;
-                            case 0:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
-                                break;
-                        }
-
-
-                    }
-                    if (a > 99) {
-                        Integer num = a;
-                        Integer[] digits = getDigits(num.toString());
-
-                        relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                        //1er bande
-                        int nbre = digits[0];
-
-                        switch (nbre) {
-                            case 1:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                                break;
-                            case 2:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-                                break;
-                            case 3:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
-                                break;
-                            case 4:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
-                                break;
-                            case 5:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
-                                break;
-                            case 6:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
-                                break;
-                            case 7:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
-                                break;
-                            case 8:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                                break;
-                            case 9:
-                                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                                break;
-                        }
-                        // 2eme bande
-                        int nbre11 = digits[1];
-                        switch (nbre11) {
-                            case 1:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                                break;
-                            case 2:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
-                                break;
-                            case 3:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
-                                break;
-                            case 4:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
-                                break;
-                            case 5:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
-                                break;
-                            case 6:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
-                                break;
-                            case 7:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
-                                break;
-                            case 8:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                                break;
-                            case 9:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                                break;
-                            case 0:
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
-                                break;
-
-                        }
-
-
-                        //bande multiplicatrice
-                        if (num < 1000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                        } else if (num < 10000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#F60202"));
-                        } else if (num < 100000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FF5722"));
-                        } else if (num < 1000000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FFC107"));
-                        } else if (num < 10000000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0CF115"));
-                        } else if (num < 100000000) {
-                            relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0228FA"));
-                        }
-
-                    }
                 }
+                Double nbre1 = digitss[1];
+                if (nbre1 ==null) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
+                }
+                else if (nbre1 == 1) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                } else if (nbre1 == 2) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                } else if (nbre1 == 3) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                } else if (nbre1 == 4) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                } else if (nbre1 == 5) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                } else if (nbre1 == 6) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                } else if (nbre1 == 7) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                } else if (nbre1 == 8) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                } else if (nbre1 == 9) {
+                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+                }
+            } catch (Exception e) {
+                relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
             }
+
+            if (num1 < 1) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#8A8989"));
+            } else if (num1 < 10) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#B18603"));
+            } else if (num1 < 100) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("FF000000"));
+            } else if (num1 < 1000) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#4C1A0B"));
+            } else if (num1 < 10000) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#F60202"));
+            } else if (num1 < 100000) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FF5722"));
+            } else if (num1 < 1000000) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FFC107"));
+            } else if (num1 < 10000000) {
+                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0CF115"));
+            }
+
+            relativeLayoutbande4.setBackgroundColor(Color.parseColor("#B18603"));
+
         }
+
     }
 
-    //fonction pou separe chaque chiffre
-    public static Integer[] getDigits (String number){
-        List<Integer> digits = new ArrayList<>();
-        for (int i = 0; i < number.length(); i++) {
-            int j = Character.digit(number.charAt(i), 10);
-            digits.add(j);
+            //fonction pou separe chaque chiffre
+            public static Double[] getDigits (String number){
+                List<Double> digits = new ArrayList<>();
+                for (int i = 0; i < number.length(); i++) {
+                    double j = Character.digit(number.charAt(i), 10);
+                    digits.add(j);
+                }
+                return digits.toArray(new Double[]{});
+
+
+            }
+
+
         }
-        return digits.toArray(new Integer[]{});
-
-    }
-
-}

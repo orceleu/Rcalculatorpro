@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment01">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,12 +16,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/cornerresistance"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/buttonCompute"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21">
 
 
             <RelativeLayout
@@ -89,61 +88,28 @@
             android:id="@+id/editText"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="236dp"
             android:autofillHints="enter value"
             android:inputType="numberDecimal"
             app:layout_constraintBottom_toBottomOf="parent"
-
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.459"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.381" />
 
         <Button
-        android:id="@+id/buttonCompute"
-        android:layout_width="268dp"
-        android:layout_height="70dp"
-        android:text="compute"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.142" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
+            android:id="@+id/buttonCompute"
+            android:layout_width="268dp"
+            android:layout_height="70dp"
+            android:text="compute"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:id="@+id/textView11"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:layout_editor_absoluteX="44dp"
-                tools:layout_editor_absoluteY="154dp" />
-
-            <TextView
-                android:id="@+id/textView44"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="6dp"
-                tools:layout_editor_absoluteX="253dp"
-                tools:layout_editor_absoluteY="152dp" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView22"
-            android:layout_width="120dp"
-            android:layout_height="42dp"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            app:layout_constraintVertical_bias="0.348" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

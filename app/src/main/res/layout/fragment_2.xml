@@ -23,7 +23,6 @@
                 android:id="@+id/linearLayout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentTop="true"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/gridLayout"
@@ -31,19 +30,9 @@
                 app:layout_constraintHorizontal_bias="0.476"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <TextView
-                    android:id="@+id/tv_point_gris"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
-                    android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
-                    tools:layout_editor_absoluteX="74dp"
-                    tools:layout_editor_absoluteY="139dp" />
 
                 <TextView
-                    android:id="@+id/tv_1band"
+                    android:id="@+id/tv_1band01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="23dp"
@@ -51,11 +40,34 @@
                     android:textColor="@color/black"
                     android:textSize="27sp"
                     android:textStyle="normal"
+                    />
+                <TextView
+                    android:id="@+id/tv_point_argent01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    android:textStyle="normal"
                     tools:layout_editor_absoluteX="74dp"
                     tools:layout_editor_absoluteY="139dp" />
 
+
+
                 <TextView
-                    android:id="@+id/tv_point"
+                    android:id="@+id/tv_2band01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="145dp" />
+                <TextView
+                    android:id="@+id/tv_point_or01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="23dp"
@@ -64,9 +76,8 @@
                     android:textStyle="normal"
                     tools:layout_editor_absoluteX="130dp"
                     tools:layout_editor_absoluteY="213dp" />
-
                 <TextView
-                    android:id="@+id/tv_2band"
+                    android:id="@+id/tv_3band01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="23dp"
@@ -78,8 +89,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="145dp" />
 
+
                 <TextView
-                    android:id="@+id/tv_mult"
+                    android:id="@+id/tv_mult01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="23dp"
@@ -90,7 +102,7 @@
                     tools:layout_editor_absoluteY="145dp" />
 
                 <TextView
-                    android:id="@+id/tv_ohms"
+                    android:id="@+id/tv_ohms01"
                     android:layout_width="80dp"
                     android:layout_height="42dp"
                     android:layout_marginTop="23dp"
@@ -99,11 +111,10 @@
                     android:textStyle="normal" />
 
                 <TextView
-                    android:id="@+id/tv_pourcentage"
+                    android:id="@+id/tv_pourcentage01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp"
-                    android:text="+-5%"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="normal" />
@@ -943,15 +954,16 @@
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#B18603"
-                        app:cardCornerRadius="7dp" >
+                        app:cardCornerRadius="7dp">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:text="gold"
-                            android:textStyle="bold"
-                            android:textSize="16sp"
                             android:textColor="@color/white"
-                            android:layout_gravity="center"/>
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_prc_argent01"
@@ -983,7 +995,6 @@
                 android:id="@+id/linearLayout6"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-
                 android:background="@drawable/cornerresistance"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
@@ -1014,7 +1025,7 @@
 
                 <RelativeLayout
                     android:id="@+id/layout03"
-                    android:layout_width="15dp"
+                    android:layout_width="10dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="22dp"

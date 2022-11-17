@@ -172,7 +172,7 @@ public class Fragment1 extends Fragment {
         toleranceArgent.setOnClickListener(view -> {tv_pourcentage.setText("+-10%");relativeLayout4.setBackgroundColor(Color.parseColor("#8A8989" ));});
 
 
-        tv_ohms1.setText("ohms");
+        tv_ohms1.setText("Ω");
 
         return view1;
 

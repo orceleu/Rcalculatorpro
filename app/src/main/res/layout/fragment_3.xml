@@ -1357,7 +1357,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <RelativeLayout
-                    android:id="@+id/layout01"
+                    android:id="@+id/layout001"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:background="#4C1A0B"
@@ -1367,7 +1367,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
                 <RelativeLayout
-                    android:id="@+id/layout02"
+                    android:id="@+id/layout002"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
@@ -1378,7 +1378,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
                 <RelativeLayout
-                    android:id="@+id/layout03"
+                    android:id="@+id/layout003"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"
@@ -1390,7 +1390,7 @@
                     app:layout_constraintVertical_bias="0.562" />
 
                 <RelativeLayout
-                    android:id="@+id/layout04"
+                    android:id="@+id/layout004"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="1dp"
@@ -1400,7 +1400,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
                     app:layout_constraintVertical_bias="0.2" />
                 <RelativeLayout
-                    android:id="@+id/layout05"
+                    android:id="@+id/layout005"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:background="#B18603"
@@ -1408,7 +1408,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
                     app:layout_constraintVertical_bias="0.2" />
                 <RelativeLayout
-                    android:id="@+id/layout06"
+                    android:id="@+id/layout006"
                     android:layout_width="15dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="15dp"

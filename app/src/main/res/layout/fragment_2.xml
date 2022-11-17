@@ -103,11 +103,11 @@
 
                 <TextView
                     android:id="@+id/tv_ohms01"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="42dp"
                     android:layout_marginTop="23dp"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:textSize="24sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -116,6 +116,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="23dp"
                     android:textColor="@color/black"
+                    android:text="    +-5%"
                     android:textSize="20sp"
                     android:textStyle="normal" />
 
@@ -960,7 +961,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-1"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -980,7 +981,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-2"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1000,7 +1001,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.05"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1020,7 +1021,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.02"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1039,7 +1040,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.5"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1059,7 +1060,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.25"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1079,7 +1080,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.1"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1099,7 +1100,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-0.01"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
@@ -1119,7 +1120,7 @@
                             android:layout_height="wrap_content"
                             android:text="+-20"
                             android:textStyle="bold"
-                            android:textSize="8sp"
+                            android:textSize="11sp"
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>

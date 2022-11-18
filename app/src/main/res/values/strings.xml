@@ -10,4 +10,7 @@
     <string name="hello_blank_fragment3" />
     <string name="_1">1</string>
     <string name="_0">0</string>
+    <string name="setting">setting</string>
+    <string name="more">more</string>
+    <string name="share">share</string>
 </resources>

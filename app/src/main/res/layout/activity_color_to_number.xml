@@ -7,35 +7,24 @@
     tools:context=".ColorToNumber">
 
 
-    <TextView
-        android:id="@+id/textViewTop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:text="convert to value"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Spinner
-        android:layout_width="78dp"
+        android:layout_width="80dp"
        android:id="@+id/spinner1"
         android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:spinnerMode="dropdown"/>
 
     <FrameLayout
-        android:layout_width="wrap_content"
         android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTop">
+        app:layout_constraintTop_toBottomOf="@+id/spinner1">
+
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

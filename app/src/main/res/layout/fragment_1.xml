@@ -21,7 +21,6 @@
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_alignParentTop="true"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/gridLayout"
@@ -927,7 +926,7 @@
             android:id="@+id/linearLayout6"
             android:layout_width="153dp"
             android:layout_height="wrap_content"
-
+            android:layout_marginTop="2dp"
             android:background="@drawable/cornerresistance"
             android:gravity="center_horizontal"
             android:orientation="horizontal"

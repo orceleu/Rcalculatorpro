@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class NumberToColor extends AppCompatActivity {
 
@@ -32,6 +33,9 @@ public class NumberToColor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number_to_color);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Number to color");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         spinner1 = findViewById(R.id.spinner2);
         fragment01Action = new Fragment01();

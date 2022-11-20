@@ -14,13 +14,16 @@
         android:theme="@style/Theme.RCalculatorPro"
         tools:targetApi="31">
         <activity
+            android:name=".SmdActivity"
+            android:exported="false" />
+        <activity
             android:name=".NumberToColor"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ColorToNumber"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

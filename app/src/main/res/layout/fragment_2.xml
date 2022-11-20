@@ -26,14 +26,15 @@
                 android:background="@drawable/cornerresistance"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
+                android:layout_marginTop="2dp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <RelativeLayout
                     android:id="@+id/layout01"
-                    android:layout_width="15dp"
-                    android:layout_height="50dp"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
                     android:background="#4C1A0B"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.31"
@@ -42,8 +43,8 @@
 
                 <RelativeLayout
                     android:id="@+id/layout02"
-                    android:layout_width="15dp"
-                    android:layout_height="50dp"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="15dp"
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -53,8 +54,8 @@
 
                 <RelativeLayout
                     android:id="@+id/layout03"
-                    android:layout_width="15dp"
-                    android:layout_height="50dp"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="15dp"
                     android:background="@color/black"
                     app:layout_constraintBottom_toTopOf="@+id/textView2"
@@ -64,8 +65,8 @@
 
                 <RelativeLayout
                     android:id="@+id/layout04"
-                    android:layout_width="15dp"
-                    android:layout_height="50dp"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="22dp"
                     android:background="@color/black"
@@ -74,8 +75,8 @@
                     app:layout_constraintVertical_bias="0.2" />
                 <RelativeLayout
                     android:id="@+id/layout05"
-                    android:layout_width="15dp"
-                    android:layout_height="50dp"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
                     android:background="#B18603"
                     app:layout_constraintBottom_toTopOf="@+id/textView2"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2"

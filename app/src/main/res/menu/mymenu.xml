@@ -3,12 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <item android:id="@+id/setting"
     android:title="@string/setting"
+    android:icon="@android:drawable/ic_menu_preferences"
     app:showAsAction="never"
     />
     <item android:id="@+id/help"
         android:title="@string/more"
+        android:icon="@android:drawable/ic_menu_info_details"
         app:showAsAction="never"/>
     <item android:id="@+id/share"
+        android:icon="@android:drawable/ic_menu_share"
         android:title="@string/share"
         app:showAsAction="never"/>
 

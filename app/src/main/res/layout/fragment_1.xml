@@ -694,15 +694,16 @@
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
                     app:cardBackgroundColor="#8A8989"
-                    app:cardCornerRadius="7dp" >
+                    app:cardCornerRadius="7dp">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="silver"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"/>
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
                 </androidx.cardview.widget.CardView>
 
 

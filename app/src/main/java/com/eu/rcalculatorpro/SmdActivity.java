@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class SmdActivity extends AppCompatActivity {
-   TextView valueOut1,valueOut2,valueOut3,valueOut4;
+   TextView valueOut1,valueOut2,valueOut3,valueOut4,tvSmdohm;
     CardView smdClear,smd0,smd1,smd2,smd3,smd4,smd5,smd6,smd7,smd8,smd9,delete,result,smdA,smdB,smdC,smdD,smdE,smdF,smdX,smdY,smdZ,smdH,smdR,smdM,smdS,smdLine;
     char first;
     char second;
@@ -32,17 +32,9 @@ public class SmdActivity extends AppCompatActivity {
         smd7=findViewById(R.id.smd7);
         smd8=findViewById(R.id.smd8);
         smd9=findViewById(R.id.smd9);
-        smdA=findViewById(R.id.smdA);
-        smdB=findViewById(R.id.smdB);
-        smdC=findViewById(R.id.smdC);
-        smdD=findViewById(R.id.smdD);
-        smdE=findViewById(R.id.smdE);
-        smdF=findViewById(R.id.smdF);
-        smdH=findViewById(R.id.smdH);
-        smdY=findViewById(R.id.smdY);
-        smdS=findViewById(R.id.smdS);
+        tvSmdohm=findViewById(R.id.tvSmdohm);
+
         smdZ=findViewById(R.id.smdZ);
-        smdX=findViewById(R.id.smdX);
         smdLine=findViewById(R.id.smdLine);
         smdClear=findViewById(R.id.smdClear);
         smdR=findViewById(R.id.smdR);
@@ -71,21 +63,73 @@ public class SmdActivity extends AppCompatActivity {
         smd7.setOnClickListener(view -> initBtn("7",'7'));
         smd8.setOnClickListener(view -> initBtn("8",'8'));
         smd9.setOnClickListener(view -> initBtn("9",'9'));
-        smdA.setOnClickListener(view -> initBtn("A",'A'));
-        smdB.setOnClickListener(view -> initBtn("B",'B'));
-        smdC.setOnClickListener(view -> initBtn("C",'C'));
-        smdD.setOnClickListener(view -> initBtn("D",'D'));
-        smdE.setOnClickListener(view -> initBtn("E",'E'));
-        smdF.setOnClickListener(view -> initBtn("F",'F'));
-        smdH.setOnClickListener(view -> initBtn("G",'G'));
-        smdX.setOnClickListener(view -> initBtn("X",'X'));
-        smdS.setOnClickListener(view -> initBtn("S",'S'));
-        smdZ.setOnClickListener(view -> initBtn("Z",'Z'));
+        smdClear.setOnClickListener(view ->{ valueOut1.setText(""); valueOut2.setText("");valueOut3.setText("");valueOut4.setText("");
+            value1.setText(""); value2.setText("");value3.setText("");value4.setText("");tvSmdohm.setText("");
+            first='0';
+            second='0';
+            third='0';
+            fourth='0';
+            count=0;
+               });
+
+
        // smdLine.setOnClickListener(view -> initBtn("9",'9'));
         smdR.setOnClickListener(view -> initBtn("R",'R'));
         smdM.setOnClickListener(view -> initBtn("M",'M'));
+     //for result
+        result.setOnClickListener(view ->{
+            if(count<3){
+                Toast.makeText(this,"invalid code:min 3 digit",Toast.LENGTH_SHORT).show();
+            }else{
 
-        result.setOnClickListener(view -> resultat());
+                if(count==3) {
+
+
+                    if(first=='R'){
+                        rResult1();
+                    }else if(first=='M')
+                        mResult1();
+                    else{
+                        if(second=='R'){
+                            rResult();
+                        }else if(second=='M'){
+                            mResult();
+                        }else {
+                            resultat3();
+                        }
+
+                    }}
+
+                if(count==4) {
+                    if(first=='R'){
+                        rResult2();
+                    }else if(first=='M')
+                        mResult2();
+                    else{
+                        if(second=='R'){
+                            rResult3();
+                        }else if(second=='M'){
+                            mResult3();
+                        }else {
+                            resultat4();
+                        }}}}
+
+
+
+                    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         delete.setOnClickListener(view -> {  if(count>0){count--;
             if(count==3){
@@ -104,11 +148,9 @@ public class SmdActivity extends AppCompatActivity {
 
     }
 
-    private void resultat() {
+    private void mResult3() {
 
-        if(count<3){
-            Toast.makeText(this,"invalid code:min 3 digit",Toast.LENGTH_SHORT).show();
-        }else{
+
 
             switch (first){
                 case '0':{valueOut1.setText("");}break;
@@ -121,11 +163,390 @@ public class SmdActivity extends AppCompatActivity {
                 case '7':{valueOut1.setText("7");}break;
                 case '8':{valueOut1.setText("8");}break;
                 case '9':{valueOut1.setText("9");}break;
-                case 'R':{valueOut1.setText("R");}break;
-                case 'M':{valueOut1.setText('M');}break;
-                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
+            switch (second){
+                case 'M':{valueOut2.setText(".");}break;
+
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
             }
+            switch (third){
+                case '0':{valueOut3.setText("0");}break;
+                case '1':{valueOut3.setText("1");}break;
+                case '2':{valueOut3.setText("2");}break;
+                case '3':{valueOut3.setText("3");}break;
+                case '4':{valueOut3.setText("4");}break;
+                case '5':{valueOut3.setText("5");}break;
+                case '6':{valueOut3.setText("6");}break;
+                case '7':{valueOut3.setText("7");}break;
+                case '8':{valueOut3.setText("8");}break;
+                case '9':{valueOut3.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+            switch (fourth){
+                case '0':{valueOut4.setText("0");}break;
+                case '1':{valueOut4.setText("1");}break;
+                case '2':{valueOut4.setText("2");}break;
+                case '3':{valueOut4.setText("3");}break;
+                case '4':{valueOut4.setText("4");}break;
+                case '5':{valueOut4.setText("5");}break;
+                case '6':{valueOut4.setText("6");}break;
+                case '7':{valueOut4.setText("7");}break;
+                case '8':{valueOut4.setText("8");}break;
+                case '9':{valueOut4.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+            tvSmdohm.setText("mΩ");
+
+
+        }
+
+
+
+    private void rResult3() {
+
+
+            switch (first){
+                case '0':{valueOut1.setText("");}break;
+                case '1':{valueOut1.setText("1");}break;
+                case '2':{valueOut1.setText("2");}break;
+                case '3':{valueOut1.setText("3");}break;
+                case '4':{valueOut1.setText("4");}break;
+                case '5':{valueOut1.setText("5");}break;
+                case '6':{valueOut1.setText("6");}break;
+                case '7':{valueOut1.setText("7");}break;
+                case '8':{valueOut1.setText("8");}break;
+                case '9':{valueOut1.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+            switch (second){
+                case 'R':{valueOut2.setText(".");}break;
+
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+            }
+            switch (third){
+                case '0':{valueOut3.setText("0");}break;
+                case '1':{valueOut3.setText("1");}break;
+                case '2':{valueOut3.setText("2");}break;
+                case '3':{valueOut3.setText("3");}break;
+                case '4':{valueOut3.setText("4");}break;
+                case '5':{valueOut3.setText("5");}break;
+                case '6':{valueOut3.setText("6");}break;
+                case '7':{valueOut3.setText("7");}break;
+                case '8':{valueOut3.setText("8");}break;
+                case '9':{valueOut3.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+            switch (fourth){
+                case '0':{valueOut4.setText("0");}break;
+                case '1':{valueOut4.setText("1");}break;
+                case '2':{valueOut4.setText("2");}break;
+                case '3':{valueOut4.setText("3");}break;
+                case '4':{valueOut4.setText("4");}break;
+                case '5':{valueOut4.setText("5");}break;
+                case '6':{valueOut4.setText("6");}break;
+                case '7':{valueOut4.setText("7");}break;
+                case '8':{valueOut4.setText("8");}break;
+                case '9':{valueOut4.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+            tvSmdohm.setText("Ω");
+
+
+        }
+
+
+
+    private void mResult2() {
+
+
+            switch (first){
+                case 'M':{valueOut1.setText("0.");}break;
+
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+            switch (second){
+                case '0':{valueOut2.setText("");}break;
+                case '1':{valueOut2.setText("1");}break;
+                case '2':{valueOut2.setText("2");}break;
+                case '3':{valueOut2.setText("3");}break;
+                case '4':{valueOut2.setText("4");}break;
+                case '5':{valueOut2.setText("5");}break;
+                case '6':{valueOut2.setText("6");}break;
+                case '7':{valueOut2.setText("7");}break;
+                case '8':{valueOut2.setText("8");}break;
+                case '9':{valueOut2.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+            switch (third){
+                case '0':{valueOut3.setText("0");}break;
+                case '1':{valueOut3.setText("1");}break;
+                case '2':{valueOut3.setText("2");}break;
+                case '3':{valueOut3.setText("3");}break;
+                case '4':{valueOut3.setText("4");}break;
+                case '5':{valueOut3.setText("5");}break;
+                case '6':{valueOut3.setText("6");}break;
+                case '7':{valueOut3.setText("7");}break;
+                case '8':{valueOut3.setText("8");}break;
+                case '9':{valueOut3.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+             switch (fourth){
+                 case '0':{valueOut4.setText("0");}break;
+                 case '1':{valueOut4.setText("1");}break;
+                 case '2':{valueOut4.setText("2");}break;
+                 case '3':{valueOut4.setText("3");}break;
+                 case '4':{valueOut4.setText("4");}break;
+                 case '5':{valueOut4.setText("5");}break;
+                 case '6':{valueOut4.setText("6");}break;
+                 case '7':{valueOut4.setText("7");}break;
+                 case '8':{valueOut4.setText("8");}break;
+                 case '9':{valueOut4.setText("9");}break;
+                 default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+
+             tvSmdohm.setText("mΩ");
+        }
+
+
+
+    private void rResult2() {
+
+        switch (second){
+            case '0':{valueOut2.setText("0");}break;
+            case '1':{valueOut2.setText("1");}break;
+            case '2':{valueOut2.setText("2");}break;
+            case '3':{valueOut2.setText("3");}break;
+            case '4':{valueOut2.setText("4");}break;
+            case '5':{valueOut2.setText("5");}break;
+            case '6':{valueOut2.setText("6");}break;
+            case '7':{valueOut2.setText("7");}break;
+            case '8':{valueOut2.setText("8");}break;
+            case '9':{valueOut2.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+    switch (first){
+        case 'R':{valueOut1.setText("0.");}break;
+
+        default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+   }
+        switch (third){
+            case '0':{valueOut3.setText("0");}break;
+            case '1':{valueOut3.setText("1");}break;
+            case '2':{valueOut3.setText("2");}break;
+            case '3':{valueOut3.setText("3");}break;
+            case '4':{valueOut3.setText("4");}break;
+            case '5':{valueOut3.setText("5");}break;
+            case '6':{valueOut3.setText("6");}break;
+            case '7':{valueOut3.setText("7");}break;
+            case '8':{valueOut3.setText("8");}break;
+            case '9':{valueOut3.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+  switch (fourth){
+            case '0':{valueOut4.setText("0");}break;
+            case '1':{valueOut4.setText("1");}break;
+            case '2':{valueOut4.setText("2");}break;
+            case '3':{valueOut4.setText("3");}break;
+            case '4':{valueOut4.setText("4");}break;
+            case '5':{valueOut4.setText("5");}break;
+            case '6':{valueOut4.setText("6");}break;
+            case '7':{valueOut4.setText("7");}break;
+            case '8':{valueOut4.setText("8");}break;
+            case '9':{valueOut4.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+        tvSmdohm.setText("Ω");
+
+
+    }
+
+    private void mResult1() {
+
+        switch (first){
+            case 'M':{valueOut1.setText("0.");}break;
+
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+     switch (second){
+        case '0':{valueOut2.setText("");}break;
+        case '1':{valueOut2.setText("1");}break;
+        case '2':{valueOut2.setText("2");}break;
+        case '3':{valueOut2.setText("3");}break;
+        case '4':{valueOut2.setText("4");}break;
+        case '5':{valueOut2.setText("5");}break;
+        case '6':{valueOut2.setText("6");}break;
+        case '7':{valueOut2.setText("7");}break;
+        case '8':{valueOut2.setText("8");}break;
+        case '9':{valueOut2.setText("9");}break;
+        default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+        switch (third){
+            case '0':{valueOut3.setText("0");}break;
+            case '1':{valueOut3.setText("1");}break;
+            case '2':{valueOut3.setText("2");}break;
+            case '3':{valueOut3.setText("3");}break;
+            case '4':{valueOut3.setText("4");}break;
+            case '5':{valueOut3.setText("5");}break;
+            case '6':{valueOut3.setText("6");}break;
+            case '7':{valueOut3.setText("7");}break;
+            case '8':{valueOut3.setText("8");}break;
+            case '9':{valueOut3.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+        valueOut4.setText("mΩ");
+        tvSmdohm.setText("");
+    }
+    private void rResult1() {
+        switch (first){
+            case 'R':{valueOut1.setText("0.");}break;
+
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+        switch (second){
+            case '0':{valueOut2.setText("0");}break;
+            case '1':{valueOut2.setText("1");}break;
+            case '2':{valueOut2.setText("2");}break;
+            case '3':{valueOut2.setText("3");}break;
+            case '4':{valueOut2.setText("4");}break;
+            case '5':{valueOut2.setText("5");}break;
+            case '6':{valueOut2.setText("6");}break;
+            case '7':{valueOut2.setText("7");}break;
+            case '8':{valueOut2.setText("8");}break;
+            case '9':{valueOut2.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+        switch (third){
+            case '0':{valueOut3.setText("0");}break;
+            case '1':{valueOut3.setText("1");}break;
+            case '2':{valueOut3.setText("2");}break;
+            case '3':{valueOut3.setText("3");}break;
+            case '4':{valueOut3.setText("4");}break;
+            case '5':{valueOut3.setText("5");}break;
+            case '6':{valueOut3.setText("6");}break;
+            case '7':{valueOut3.setText("7");}break;
+            case '8':{valueOut3.setText("8");}break;
+            case '9':{valueOut3.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+        valueOut4.setText("Ω");
+        tvSmdohm.setText("");
+    }
+    private void mResult() {
+        switch (first){
+            case '0':{valueOut1.setText("");}break;
+            case '1':{valueOut1.setText("1");}break;
+            case '2':{valueOut1.setText("2");}break;
+            case '3':{valueOut1.setText("3");}break;
+            case '4':{valueOut1.setText("4");}break;
+            case '5':{valueOut1.setText("5");}break;
+            case '6':{valueOut1.setText("6");}break;
+            case '7':{valueOut1.setText("7");}break;
+            case '8':{valueOut1.setText("8");}break;
+            case '9':{valueOut1.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+            switch (second){
+                case 'M':{valueOut2.setText(".");}break;
+
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+                switch (third){
+                    case '0':{valueOut3.setText("0");}break;
+                    case '1':{valueOut3.setText("1");}break;
+                    case '2':{valueOut3.setText("2");}break;
+                    case '3':{valueOut3.setText("3");}break;
+                    case '4':{valueOut3.setText("4");}break;
+                    case '5':{valueOut3.setText("5");}break;
+                    case '6':{valueOut3.setText("6");}break;
+                    case '7':{valueOut3.setText("7");}break;
+                    case '8':{valueOut3.setText("8");}break;
+                    case '9':{valueOut3.setText("9");}break;
+                    default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+
+    valueOut4.setText("mΩ");
+        tvSmdohm.setText("");
+    }
+    private void rResult() {
+        switch (first){
+            case '0':{valueOut1.setText("");}break;
+            case '1':{valueOut1.setText("1");}break;
+            case '2':{valueOut1.setText("2");}break;
+            case '3':{valueOut1.setText("3");}break;
+            case '4':{valueOut1.setText("4");}break;
+            case '5':{valueOut1.setText("5");}break;
+            case '6':{valueOut1.setText("6");}break;
+            case '7':{valueOut1.setText("7");}break;
+            case '8':{valueOut1.setText("8");}break;
+            case '9':{valueOut1.setText("9");}break;
+            default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+            }
+
+            switch (second){
+                case 'R':{valueOut2.setText(".");}break;
+
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+             }
+                switch (third){
+                    case '0':{valueOut3.setText("0");}break;
+                    case '1':{valueOut3.setText("1");}break;
+                    case '2':{valueOut3.setText("2");}break;
+                    case '3':{valueOut3.setText("3");}break;
+                    case '4':{valueOut3.setText("4");}break;
+                    case '5':{valueOut3.setText("5");}break;
+                    case '6':{valueOut3.setText("6");}break;
+                    case '7':{valueOut3.setText("7");}break;
+                    case '8':{valueOut3.setText("8");}break;
+                    case '9':{valueOut3.setText("9");}break;
+                    default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+
+                }
+
+
+        valueOut4.setText("Ω");
+        tvSmdohm.setText("");
+    }
+    private void resultat4() {
+
+
+            switch (first){
+                case '0':{valueOut1.setText("");}break;
+                case '1':{valueOut1.setText("1");}break;
+                case '2':{valueOut1.setText("2");}break;
+                case '3':{valueOut1.setText("3");}break;
+                case '4':{valueOut1.setText("4");}break;
+                case '5':{valueOut1.setText("5");}break;
+                case '6':{valueOut1.setText("6");}break;
+                case '7':{valueOut1.setText("7");}break;
+                case '8':{valueOut1.setText("8");}break;
+                case '9':{valueOut1.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
             switch (second){
                 case '0':{valueOut2.setText("0");}break;
@@ -138,55 +559,90 @@ public class SmdActivity extends AppCompatActivity {
                 case '7':{valueOut2.setText("7");}break;
                 case '8':{valueOut2.setText("8");}break;
                 case '9':{valueOut2.setText("9");}break;
-                case 'R':{valueOut2.setText("R");}break;
-                case 'M':{valueOut2.setText("M");}break;
-                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
-
-
-
-
-
-            }
             switch (third){
-                case '0':{valueOut3.setText("");}break;
-                case '1':{valueOut3.setText("0");}break;
-                case '2':{valueOut3.setText("00");}break;
-                case '3':{valueOut3.setText("K");}break;
-                case '4':{valueOut3.setText("0K");}break;
-                case '5':{valueOut3.setText("00k");}break;
-                case '6':{valueOut3.setText("M");}break;
-                case '7':{valueOut3.setText("0M");}break;
-                case '8':{valueOut3.setText("00M");}break;
-                case '9':{valueOut3.setText("G");}break;
-                case 'R':{valueOut3.setText("R");}break;
-                case 'M':{valueOut3.setText("M");}break;
-                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+                case '0':{valueOut3.setText("0");}break;
+                case '1':{valueOut3.setText("1");}break;
+                case '2':{valueOut3.setText("2");}break;
+                case '3':{valueOut3.setText("3");}break;
+                case '4':{valueOut3.setText("4");}break;
+                case '5':{valueOut3.setText("5");}break;
+                case '6':{valueOut3.setText("6");}break;
+                case '7':{valueOut3.setText("7");}break;
+                case '8':{valueOut3.setText("8");}break;
+                case '9':{valueOut3.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
-
-
-                   }//switch (second){
-                //case '1':{valueOut3.setText("1");}break;
-               // case '2':{valueOut3.setText("2");}break;
-               // case '3':{valueOut3.setText("3");}break;
-               // case '4':{valueOut3.setText("4");}break;
-               // case '5':{valueOut3.setText("5");}break;
-               // case '6':{valueOut3.setText("6");}break;
-               // case '7':{valueOut3.setText("7");}break;
-               // case '8':{valueOut3.setText("8");}break;
-              //  case '9':{valueOut3.setText("9");}break;
-               // case 'R':{valueOut3.setText("R");}break;
-             //   case 'M':{valueOut3.setText("M");}break;
-              //  default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}
+            switch (fourth){
+                case '0':{valueOut4.setText("");tvSmdohm.setText("");}break;
+                case '1':{valueOut4.setText("0Ω");tvSmdohm.setText("");}break;
+                case '2':{valueOut4.setText("00Ω");tvSmdohm.setText("");}break;
+                case '3':{valueOut4.setText("kΩ");tvSmdohm.setText("");}break;
+                case '4':{valueOut4.setText("0kΩ");tvSmdohm.setText("");}break;
+                case '5':{valueOut4.setText("00kΩ");tvSmdohm.setText("");}break;
+                case '6':{valueOut4.setText("MΩ");tvSmdohm.setText("");}break;
+                case '7':{valueOut4.setText("0MΩ");tvSmdohm.setText("");}break;
+                case '8':{valueOut4.setText("00MΩ");tvSmdohm.setText("");}break;
+                case '9':{valueOut4.setText("GΩ");tvSmdohm.setText("");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
 
 
 
 
 
-            }
+
+        }
+
+
+    private void resultat3() {
+
+
+            switch (first){
+                case '0':{valueOut1.setText("");}break;
+                case '1':{valueOut1.setText("1");}break;
+                case '2':{valueOut1.setText("2");}break;
+                case '3':{valueOut1.setText("3");}break;
+                case '4':{valueOut1.setText("4");}break;
+                case '5':{valueOut1.setText("5");}break;
+                case '6':{valueOut1.setText("6");}break;
+                case '7':{valueOut1.setText("7");}break;
+                case '8':{valueOut1.setText("8");}break;
+                case '9':{valueOut1.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
+              switch (second){
+                case '0':{valueOut2.setText("0");}break;
+                case '1':{valueOut2.setText("1");}break;
+                case '2':{valueOut2.setText("2");}break;
+                case '3':{valueOut2.setText("3");}break;
+                case '4':{valueOut2.setText("4");}break;
+                case '5':{valueOut2.setText("5");}break;
+                case '6':{valueOut2.setText("6");}break;
+                case '7':{valueOut2.setText("7");}break;
+                case '8':{valueOut2.setText("8");}break;
+                case '9':{valueOut2.setText("9");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+                  switch (third){
+                case '0':{valueOut3.setText("Ω");valueOut4.setText("");}break;
+                case '1':{valueOut3.setText("0Ω");valueOut4.setText("");}break;
+                case '2':{valueOut3.setText("00Ω");valueOut4.setText("");}break;
+                case '3':{valueOut3.setText("KΩ");valueOut4.setText("");}break;
+                case '4':{valueOut3.setText("0KΩ");valueOut4.setText("");}break;
+                case '5':{valueOut3.setText("00kΩ");valueOut4.setText("");}break;
+                case '6':{valueOut3.setText("MΩ");valueOut4.setText("");}break;
+                case '7':{valueOut3.setText("0MΩ");valueOut4.setText("");}break;
+                case '8':{valueOut3.setText("00MΩ");valueOut4.setText("");}break;
+                case '9':{valueOut3.setText("G");valueOut4.setText("");}break;
+                default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
+
+
+
     }
-
     private void initBtn(String s, char s1) {
         if(count<4) {
             count++;

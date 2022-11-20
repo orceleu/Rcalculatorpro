@@ -31,7 +31,8 @@ public class Fragment01 extends Fragment {
     Spinner spinner01;
     List<String> name01;
     int convert;
-    int x;
+    boolean v=true;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -53,7 +54,9 @@ public class Fragment01 extends Fragment {
             @Override
             public void onClick(View view) {
 
-                func(convert);}});
+                func(convert, v);
+            }
+        });
 
         name01 = new ArrayList<>();
         name01.add("ohm");
@@ -68,14 +71,14 @@ public class Fragment01 extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        convert=1;
+                        convert = 1;
                         break;
                     case 1:
-                        convert=1000;
+                        convert = 1000;
                         break;
 
                     case 2:
-                        convert=1000000;
+                        convert = 1000000;
                         break;
 
 
@@ -90,17 +93,11 @@ public class Fragment01 extends Fragment {
         });
 
 
-
-
-
-
-
-
         return view01;
 
     }
 
-    public void func(int s) {
+    public void func(int s, boolean x) {
         //input{{
 
 
@@ -113,189 +110,304 @@ public class Fragment01 extends Fragment {
 
 
             double y = Double.parseDouble(editText01.getText().toString());
-            double a = s * y;
+
+            double valueinitial = y * s;
+            double multiplicator = valueinitial;
+
+            String calcul = Double.toString(valueinitial);
+            String a = calcul;
 
 
-            double num3 = a * 100;
-            double num2 = a * 10;
-            double num1 = a;
+            //pour la verification de l'entrer
 
-            Double[] digitss = getDigits(Double.toString(num1));
-            Double[] digits = getDigits(Double.toString(num2));
-            Double[] digit = getDigits(Double.toString(num3));
+           try {
 
-
-
-
-
-            if (a < 1) {
-                Double b1 = digit[0];
-                if (b1 == 1) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                } else if (b1 == 2) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-                } else if (b1 == 3) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
-                } else if (b1 == 4) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
-                } else if (b1 == 5) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
-                } else if (b1 == 6) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
-                } else if (b1 == 7) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
-                } else if (b1 == 8) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                } else if (b1 == 9) {
-                    relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                }
-
-
-                try {
-
-
-
-                    Double nbre1 = digit[1];
-
-                      if (nbre1 ==null) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
-                    }
-                       else if (nbre1 == 1) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                    } else if (nbre1 == 2) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
-                    } else if (nbre1 == 3) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
-                    } else if (nbre1 == 4) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
-                    } else if (nbre1 == 5) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
-                    } else if (nbre1 == 6) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
-                    } else if (nbre1 == 7) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
-                    } else if (nbre1 == 8) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                    } else if (nbre1 == 9) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                    }
-
-
-                } catch (Exception ee) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));                }
-
-
-            }
-            Double b1 = digitss[0];
-            if (b1 == 1) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-            } else if (b1 == 2) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-            } else if (b1 == 3) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
-            } else if (b1 == 4) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
-            } else if (b1 == 5) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
-            } else if (b1 == 6) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
-            } else if (b1 == 7) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
-            } else if (b1 == 8) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
-            } else if (b1 == 9) {
-                relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
-            }
-            try {
-                if (a < 10) {
-
-                    Double nbre1 = digits[1];
-                     if (nbre1 == null) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
-                    }
-                   else if (nbre1 == 1) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                    } else if (nbre1 == 2) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
-                    } else if (nbre1 == 3) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
-                    } else if (nbre1 == 4) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
-                    } else if (nbre1 == 5) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
-                    } else if (nbre1 == 6) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
-                    } else if (nbre1 == 7) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
-                    } else if (nbre1 == 8) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                    } else if (nbre1 == 9) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                    }
-
-                }
-                Double nbre1 = digitss[1];
-                if (nbre1 ==null) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
-                }
-                else if (nbre1 == 1) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                } else if (nbre1 == 2) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
-                } else if (nbre1 == 3) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
-                } else if (nbre1 == 4) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
-                } else if (nbre1 == 5) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
-                } else if (nbre1 == 6) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
-                } else if (nbre1 == 7) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
-                } else if (nbre1 == 8) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
-                } else if (nbre1 == 9) {
-                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
-                }
+                if (multiplicator >= 100 && a.charAt(2) != '0') { Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
             } catch (Exception e) {
-                relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
             }
 
-            if (num1 < 1) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#8A8989"));
-            } else if (num1 < 10) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#B18603"));
-            } else if (num1 < 100) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("FF000000"));
-            } else if (num1 < 1000) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#4C1A0B"));
-            } else if (num1 < 10000) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#F60202"));
-            } else if (num1 < 100000) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FF5722"));
-            } else if (num1 < 1000000) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FFC107"));
-            } else if (num1 < 10000000) {
-                relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0CF115"));
+     /*
+            try {
+
+                if (multiplicator >= 100 && a.charAt(3) != '0'){ Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
+            } catch (Exception e) {
             }
 
-            relativeLayoutbande4.setBackgroundColor(Color.parseColor("#B18603"));
+
+            try {
+
+                if (multiplicator >= 100 && a.charAt(4) != '0'){ Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
+            } catch (Exception e) {
+            }
+
+
+            try {
+
+                if (multiplicator >= 100 && a.charAt(5) != '0'){ Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
+            } catch (Exception e) {
+            }
+
+
+            try {
+
+                if (a.charAt(3) != '0') { Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
+            } catch (Exception e) {
+            }
+
+            try {
+
+                if (multiplicator >= 1 && a.charAt(2) != '0') { Toast.makeText(getActivity(), "erreur , la valeur la plus proche est", Toast.LENGTH_LONG).show();}
+
+            } catch (Exception e) {
+            }
+   */
+
+                // pour les 0.22
+                if (multiplicator < 1) {
+
+
+                    switch (a.charAt(2)) {
+
+                        case '1':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
+
+                            break;
+                        case '2':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
+                            break;
+                        case '3':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
+                            break;
+                        case '4':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
+                            break;
+                        case '5':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
+                            break;
+                        case '6':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
+                            break;
+                        case '7':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
+                            break;
+                        case '8':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                            break;
+                        case '9':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+                            break;
+
+                    }
+
+                    try {
+
+                        switch (a.charAt(3)) {
+
+                            case '0':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
+                                break;
+                            case '1':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+
+                                break;
+                            case '2':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                                break;
+                            case '3':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                                break;
+                            case '4':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                                break;
+                            case '5':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                                break;
+                            case '6':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                                break;
+                            case '7':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                                break;
+                            case '8':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                                break;
+                            case '9':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+                                break;
+                        }
+                    } catch (Exception e) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
+                    }
+
+                    relativeLayoutbande3.setBackgroundColor(Color.parseColor("#8A8989"));
+                } else {
+
+                    //suivant"#0B0303"
+                    switch (a.charAt(0)) {
+                        case '0':
+                            System.out.println("noir");
+                            break;
+                        case '1':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
+
+                            break;
+                        case '2':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
+                            break;
+                        case '3':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));
+                            break;
+                        case '4':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));
+                            break;
+                        case '5':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));
+                            break;
+                        case '6':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));
+                            break;
+                        case '7':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));
+                            break;
+                        case '8':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                            break;
+                        case '9':
+                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+                            break;
+                        //  relativeLayoutbande2.setBackgroundColor(Color.parseColor("FF000000"));
+                        // else if (nbre1 == 1) {
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                        //relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                        //relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                        // relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+
+                    }
+
+                    try {
+
+                        switch (a.charAt(1)) {
+
+                            case '0':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
+                                break;
+                            case '1':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+
+                                break;
+                            case '2':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                                break;
+                            case '3':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                                break;
+                            case '4':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                                break;
+                            case '5':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                                break;
+                            case '6':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                                break;
+                            case '7':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                                break;
+                            case '8':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                                break;
+                            case '9':
+                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+                                break;
+                        }
+                        //pour les 1.5
+                        if (a.charAt(1) == '.') {
+
+                            switch (a.charAt(2)) {
+
+
+                                case '0':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
+                                    break;
+                                case '1':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
+
+                                    break;
+                                case '2':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
+                                    break;
+                                case '3':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));
+                                    break;
+                                case '4':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));
+                                    break;
+                                case '5':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));
+                                    break;
+                                case '6':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));
+                                    break;
+                                case '7':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));
+                                    break;
+                                case '8':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));
+                                    break;
+                                case '9':
+                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));
+
+                                    break;
+                            }
+
+                        }
+
+                    } catch (Exception e) {
+                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
+                    }
+
+
+                    if (multiplicator < 1) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#8A8989"));
+                    } else if (multiplicator < 10) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#B18603"));
+                    } else if (multiplicator < 100) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0B0303"));
+                    } else if (multiplicator < 1000) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                    } else if (multiplicator < 10000) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#F60202"));
+                    } else if (multiplicator < 100000) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FF5722"));
+                    } else if (multiplicator < 1000000) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FFC107"));
+                    } else if (multiplicator < 10000000) {
+                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0CF115"));
+                    }
+
+
+                    System.out.println("or");
+                }
+
+
+            }
+
 
         }
 
     }
 
-            //fonction pou separe chaque chiffre
-            public static Double[] getDigits (String number){
-                List<Double> digits = new ArrayList<>();
-                for (int i = 0; i < number.length(); i++) {
-                    double j = Character.digit(number.charAt(i), 10);
-                    digits.add(j);
-                }
-                return digits.toArray(new Double[]{});
 
 
-            }
 
 
-        }

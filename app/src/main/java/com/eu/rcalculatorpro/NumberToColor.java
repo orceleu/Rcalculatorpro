@@ -43,9 +43,9 @@ public class NumberToColor extends AppCompatActivity {
         fragment03Action = new Fragment03();
 
         name1 = new ArrayList<>();
-        name1.add("4 band");
-        name1.add("5 band");
-        name1.add("6 band");
+        name1.add("4 bands");
+        name1.add("5 bands");
+        name1.add("6 bands");
         ArrayAdapter<String> arrayAdapter1 = new ArrayAdapter<>(NumberToColor.this, R.layout.item, name1);
         arrayAdapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner1.setAdapter(arrayAdapter1);

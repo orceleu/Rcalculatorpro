@@ -8,9 +8,27 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class SmdActivity extends AppCompatActivity {
    TextView valueOut1,valueOut2,valueOut3,valueOut4,tvSmdohm;
-    CardView smdClear,smd0,smd1,smd2,smd3,smd4,smd5,smd6,smd7,smd8,smd9,delete,result,smdA,smdB,smdC,smdD,smdE,smdF,smdX,smdY,smdZ,smdH,smdR,smdM,smdS,smdLine;
+    CardView smdClear;
+    CardView smd0;
+    CardView smd1;
+    CardView smd2;
+    CardView smd3;
+    CardView smd4;
+    CardView smd5;
+    CardView smd6;
+    CardView smd7;
+    CardView smd8;
+    CardView smd9;
+    CardView delete;
+    CardView result;
+    CardView smdZ;
+    CardView smdR;
+    CardView smdM;
+    CardView smdLine;
     char first;
     char second;
     char third;
@@ -21,6 +39,9 @@ public class SmdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("SMD");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setContentView(R.layout.activity_smd);
         smd0=findViewById(R.id.smd0);
         smd1=findViewById(R.id.smd1);
@@ -148,7 +169,7 @@ public class SmdActivity extends AppCompatActivity {
 
     }
 
-    private void mResult3() {
+        private void mResult3() {
 
 
 
@@ -203,10 +224,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
         }
-
-
-
-    private void rResult3() {
+        private void rResult3() {
 
 
             switch (first){
@@ -260,13 +278,8 @@ public class SmdActivity extends AppCompatActivity {
 
 
         }
-
-
-
-    private void mResult2() {
-
-
-            switch (first){
+        private void mResult2() {
+        switch (first){
                 case 'M':{valueOut1.setText("0.");}break;
 
                 default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
@@ -317,10 +330,7 @@ public class SmdActivity extends AppCompatActivity {
 
              tvSmdohm.setText("mΩ");
         }
-
-
-
-    private void rResult2() {
+        private void rResult2() {
 
         switch (second){
             case '0':{valueOut2.setText("0");}break;
@@ -373,8 +383,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
     }
-
-    private void mResult1() {
+        private void mResult1() {
 
         switch (first){
             case 'M':{valueOut1.setText("0.");}break;
@@ -414,7 +423,7 @@ public class SmdActivity extends AppCompatActivity {
         valueOut4.setText("mΩ");
         tvSmdohm.setText("");
     }
-    private void rResult1() {
+        private void rResult1() {
         switch (first){
             case 'R':{valueOut1.setText("0.");}break;
 
@@ -453,7 +462,7 @@ public class SmdActivity extends AppCompatActivity {
         valueOut4.setText("Ω");
         tvSmdohm.setText("");
     }
-    private void mResult() {
+        private void mResult() {
         switch (first){
             case '0':{valueOut1.setText("");}break;
             case '1':{valueOut1.setText("1");}break;
@@ -493,7 +502,7 @@ public class SmdActivity extends AppCompatActivity {
     valueOut4.setText("mΩ");
         tvSmdohm.setText("");
     }
-    private void rResult() {
+        private void rResult() {
         switch (first){
             case '0':{valueOut1.setText("");}break;
             case '1':{valueOut1.setText("1");}break;
@@ -532,7 +541,7 @@ public class SmdActivity extends AppCompatActivity {
         valueOut4.setText("Ω");
         tvSmdohm.setText("");
     }
-    private void resultat4() {
+        private void resultat4() {
 
 
             switch (first){
@@ -594,9 +603,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
         }
-
-
-    private void resultat3() {
+        private void resultat3() {
 
 
             switch (first){
@@ -643,7 +650,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
     }
-    private void initBtn(String s, char s1) {
+        private void initBtn(String s, char s1) {
         if(count<4) {
             count++;
             if (count == 1) {

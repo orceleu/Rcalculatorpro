@@ -777,7 +777,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X1"
+                            android:text="X1Ω"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"
@@ -798,7 +798,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X10"
+                            android:text="X10Ω"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@color/white"
@@ -818,7 +818,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X100"
+                            android:text="X100Ω"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"
@@ -838,7 +838,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X1000"
+                            android:text="X1kΩ"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"
@@ -858,7 +858,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X10000"
+                            android:text="X10kΩ"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"
@@ -879,7 +879,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X100000"
+                            android:text="X100kΩ"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"
@@ -900,7 +900,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X1000000"
+                            android:text="X1MΩ"
                             android:textStyle="bold"
                             android:textSize="14sp"
                             android:textColor="@color/white"

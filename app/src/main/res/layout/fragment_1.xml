@@ -22,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/gridLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,46 +32,42 @@
             <TextView
                 android:id="@+id/tv_point_gris"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
+                android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="27sp"
-                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="74dp"
                 tools:layout_editor_absoluteY="139dp" />
 
             <TextView
                 android:id="@+id/tv_1band"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
-                android:text="1"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"
                 android:textColor="@color/black"
-                android:textSize="27sp"
-                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="74dp"
                 tools:layout_editor_absoluteY="139dp" />
 
             <TextView
                 android:id="@+id/tv_point"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
+                android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="27sp"
-                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="130dp"
                 tools:layout_editor_absoluteY="213dp" />
 
             <TextView
                 android:id="@+id/tv_2band"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
-                android:text="0"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
                 android:textColor="@color/black"
-                android:textSize="27sp"
-                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="145dp" />
@@ -78,32 +75,29 @@
             <TextView
                 android:id="@+id/tv_mult"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="23dp"
+                android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="27sp"
-                android:textStyle="normal"
+                android:textSize="25sp"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="230dp"
                 tools:layout_editor_absoluteY="145dp" />
 
             <TextView
                 android:id="@+id/tv_ohms"
-                android:layout_width="80dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="23dp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tv_pourcentage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="23dp"
-                android:text="+-20%"
+                android:text="@string/_20"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -142,7 +136,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1"
+                        android:text="@string/_1"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -162,7 +156,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2"
+                    android:text="@string/_2"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -181,7 +175,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3"
+                    android:text="@string/_3"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -200,7 +194,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4"
+                    android:text="@string/_4"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -219,7 +213,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5"
+                    android:text="@string/_5"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -238,7 +232,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6"
+                    android:text="@string/_6"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -257,7 +251,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7"
+                    android:text="@string/_7"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -276,7 +270,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8"
+                    android:text="@string/_8"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -295,7 +289,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="9"
+                    android:text="@string/_9"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/black"
@@ -324,7 +318,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -344,7 +338,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -364,7 +358,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2"
+                        android:text="@string/_2"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -384,7 +378,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3"
+                        android:text="@string/_3"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -404,7 +398,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="4"
+                        android:text="@string/_4"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -425,7 +419,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="5"
+                        android:text="@string/_5"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -446,7 +440,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6"
+                    android:text="@string/_6"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -466,7 +460,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="7"
+                        android:text="@string/_7"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -486,7 +480,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="8"
+                        android:text="@string/_8"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -506,7 +500,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="9"
+                        android:text="@string/_9"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/black"
@@ -534,7 +528,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="X1Ω"
+                    android:text="@string/x1"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -555,7 +549,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="X10Ω"
+                    android:text="@string/x10"
                     android:textStyle="bold"
                     android:textSize="16sp"
                     android:textColor="@color/white"
@@ -575,7 +569,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X100Ω"
+                        android:text="@string/x100"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -595,7 +589,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X1kΩ"
+                        android:text="@string/x1k"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -615,7 +609,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X10kΩ"
+                        android:text="@string/x10k"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -636,7 +630,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X100kΩ"
+                        android:text="@string/x100k"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -657,7 +651,27 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="X1MΩ"
+                        android:layout_gravity="center"
+                        android:text="@string/x1m"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                </androidx.cardview.widget.CardView>
+
+ <androidx.cardview.widget.CardView
+                    android:id="@+id/btn_multiplicator_violet"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="2dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="#D703FB"
+                    app:cardCornerRadius="7dp" >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/x10m"
                         android:textStyle="bold"
                         android:textSize="15sp"
                         android:textColor="@color/white"
@@ -678,7 +692,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="gold"
+                        android:text="@string/gold"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -700,7 +714,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="silver"
+                        android:text="@string/silver"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -728,7 +742,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-1"
+                        android:text="@string/_1tolerance"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -748,7 +762,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-2"
+                        android:text="@string/_2tolerance"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -768,7 +782,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.05"
+                        android:text="@string/_0_05"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -788,7 +802,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.02"
+                        android:text="@string/_0_02"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -807,7 +821,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.5"
+                        android:text="@string/_0_5"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -827,7 +841,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.25"
+                        android:text="@string/_0_25"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -847,7 +861,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.1"
+                        android:text="@string/_0_1"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -867,7 +881,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="+-0.01"
+                        android:text="@string/_0_01"
                         android:textStyle="bold"
                         android:textSize="11sp"
                         android:textColor="@color/white"
@@ -892,7 +906,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="gold"
+                        android:text="@string/gold"
                         android:textColor="@color/white"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -911,7 +925,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="silver"
+                        android:text="@string/silver"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/white"
@@ -928,13 +942,13 @@
             android:id="@+id/linearLayout6"
             android:layout_width="153dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:background="@drawable/cornerresistance"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <RelativeLayout
                 android:id="@+id/layout1"

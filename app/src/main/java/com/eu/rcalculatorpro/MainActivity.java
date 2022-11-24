@@ -1,28 +1,30 @@
 package com.eu.rcalculatorpro;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.app.Activity;
-import android.view.Menu;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 CardView cardView1;
 CardView cardView2;
 CardView smd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
         setContentView(R.layout.activity_main);
+
+       
+
+
+        
             cardView1=findViewById(R.id.colorToNumber);
             cardView2=findViewById(R.id.numberToColor);
             smd=findViewById(R.id.SMD);
@@ -56,7 +58,7 @@ CardView smd;
 
         if(item.getItemId()==R.id.setting){
             Toast.makeText(this,"setting selected",Toast.LENGTH_SHORT).show();
-        }else if(item.getItemId()==R.id.help) {
+        }else if(item.getItemId()==R.id.rate) {
             Toast.makeText(this, "help selected", Toast.LENGTH_SHORT).show();
         }else if(item.getItemId()==R.id.share) {
             String data = "R calculator pro";

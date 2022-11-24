@@ -8,7 +8,9 @@
 
 
 
+
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/cornerlayout"
@@ -123,7 +125,6 @@
                     android:layout_height="30dp"
                     android:layout_marginStart="4dp"
                     android:background="@drawable/corner2" />
-
 
 
             </LinearLayout>

@@ -6,8 +6,8 @@
     android:icon="@android:drawable/ic_menu_preferences"
     app:showAsAction="never"
     />
-    <item android:id="@+id/help"
-        android:title="@string/more"
+    <item android:id="@+id/rate"
+        android:title="@string/rate"
         android:icon="@android:drawable/ic_menu_info_details"
         app:showAsAction="never"/>
     <item android:id="@+id/share"

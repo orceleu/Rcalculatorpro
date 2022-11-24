@@ -1,14 +1,19 @@
 package com.eu.rcalculatorpro;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,5 +84,24 @@ public class ColorToNumber extends AppCompatActivity {
     fragmentTransaction.commit();
 
   }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenuctn,menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==R.id.about){
+            Toast.makeText(this,"about selected",Toast.LENGTH_SHORT).show();
+        }else if(item.getItemId()==R.id.valueToColorCtn) {
+            Intent intent=new Intent(this,NumberToColor.class);startActivity(intent);finish();
+        }else if(item.getItemId()==R.id.smdCtn) {
+            Intent intent=new Intent(this,SmdActivity.class);startActivity(intent);finish();
+
+        }else{
+            return super.onOptionsItemSelected(item);
+        }return true;
+    }
 }

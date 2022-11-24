@@ -13,4 +13,9 @@
     <string name="setting">setting</string>
     <string name="more">more</string>
     <string name="share">share</string>
+    <string name="rate">rate</string>
+    <string name="about">about</string>
+    <string name="valueToColor">value to color</string>
+    <string name="colorToValue">color to value</string>
+    <string name="smd">go to SMD</string>
 </resources>

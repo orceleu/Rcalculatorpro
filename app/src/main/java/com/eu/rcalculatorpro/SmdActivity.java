@@ -1,9 +1,13 @@
 package com.eu.rcalculatorpro;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -673,4 +677,26 @@ public class SmdActivity extends AppCompatActivity {
     }
 
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenusmd,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId()==R.id.about){
+            Toast.makeText(this,"about selected",Toast.LENGTH_SHORT).show();
+        }else if(item.getItemId()==R.id.colorToValue) {
+            Intent intent=new Intent(this,ColorToNumber.class);startActivity(intent);finish();
+        }else if(item.getItemId()==R.id.valueToColor) {
+            Intent intent=new Intent(this,NumberToColor.class);startActivity(intent);finish();
+
+        }else{
+            return super.onOptionsItemSelected(item);
+        }return true;
+    }
 }
+

@@ -395,7 +395,6 @@ public class Fragment02 extends Fragment {
                             case '9':
                                 relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FDFBFB"));
                                 tvCtn3.setText("white");
-
                                 break;
                         }
 
@@ -410,7 +409,7 @@ public class Fragment02 extends Fragment {
                     relativeLayoutbande4.setBackgroundColor(Color.parseColor("#8A8989"));
                     tvCtn4.setText("silver");
                 } else if (valueinitial < 100) {
-                    relativeLayoutbande4.setBackgroundColor(Color.parseColor("##B18603"));
+                    relativeLayoutbande4.setBackgroundColor(Color.parseColor("#B18603"));
                     tvCtn4.setText("gold");
                 } else if (valueinitial < 1000) {
                     relativeLayoutbande4.setBackgroundColor(Color.parseColor("#0B0303"));

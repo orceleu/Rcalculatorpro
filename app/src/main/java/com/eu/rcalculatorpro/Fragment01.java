@@ -20,18 +20,13 @@ import java.util.List;
 
 public class Fragment01 extends Fragment {
 
-    RelativeLayout relativeLayoutbande1;
-    RelativeLayout relativeLayoutbande2;
-    RelativeLayout relativeLayoutbande3;
-    RelativeLayout relativeLayoutbande4;
-    TextView tvCtn1,tvCtn2,tvCtn3,tvCtn4;
-    EditText editText01;
-    Button button01;
-    Spinner spinner01;
-    Spinner spinner02;
-    List<String> name01;
-    List<String> name02;
-    int convert;
+   private RelativeLayout relativeLayoutbande1;
+   private RelativeLayout relativeLayoutbande2;
+   private    RelativeLayout relativeLayoutbande3;
+    private RelativeLayout relativeLayoutbande4;
+    private TextView tvCtn1,tvCtn2,tvCtn3,tvCtn4;
+    private EditText editText01;
+    private int convert;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,13 +40,13 @@ public class Fragment01 extends Fragment {
         tvCtn3 = view01.findViewById(R.id.tvctn3);
         tvCtn4 = view01.findViewById(R.id.tvctn4);
         editText01 = view01.findViewById(R.id.editText);
-        button01 = view01.findViewById(R.id.buttonCompute);
-        spinner01 = view01.findViewById(R.id.selector);
-        spinner02 = view01.findViewById(R.id.tolerancectn);
+        Button button01 = view01.findViewById(R.id.buttonCompute);
+        Spinner spinner01 = view01.findViewById(R.id.selector);
+        Spinner spinner02 = view01.findViewById(R.id.tolerancectn);
 
         button01.setOnClickListener(view -> func(convert));
 
-        name01 = new ArrayList<>();
+        List<String> name01 = new ArrayList<>();
         name01.add("Ω");
         name01.add("KΩ");
         name01.add("MΩ");
@@ -81,7 +76,8 @@ public class Fragment01 extends Fragment {
 
             }
 
-        });name02 = new ArrayList<>();
+        });
+        List<String> name02 = new ArrayList<>();
         name02.add("+-20%");
         name02.add("+-10%");
         name02.add("+-5%");
@@ -124,7 +120,7 @@ public class Fragment01 extends Fragment {
 
 
 
-    public void func(int s) {
+    private void func(int s) {
         //input{{
         if ((editText01.getText().toString().isEmpty())) {
             Toast.makeText(getActivity(), "empty", Toast.LENGTH_LONG).show();

@@ -21,10 +21,6 @@ CardView smd;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       
-
-
-        
             cardView1=findViewById(R.id.colorToNumber);
             cardView2=findViewById(R.id.numberToColor);
             smd=findViewById(R.id.SMD);
@@ -59,7 +55,7 @@ CardView smd;
         if(item.getItemId()==R.id.setting){
             Toast.makeText(this,"setting selected",Toast.LENGTH_SHORT).show();
         }else if(item.getItemId()==R.id.rate) {
-            Toast.makeText(this, "help selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "rate", Toast.LENGTH_SHORT).show();
         }else if(item.getItemId()==R.id.share) {
             String data = "R calculator pro";
             Intent intent= new Intent(Intent.ACTION_SEND);

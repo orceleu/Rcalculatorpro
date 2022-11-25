@@ -207,7 +207,6 @@ public class Fragment02 extends Fragment {
                             case '1':
                                 relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));
                                 tvCtn2.setText("brown");
-
                                 break;
                             case '2':
                                 relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));
@@ -244,8 +243,7 @@ public class Fragment02 extends Fragment {
                         }
                     } catch (Exception e) {
                         relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));
-                        tvCtn2.setText("black");
-                    }
+                        tvCtn2.setText("black");}
 
                 try {
 

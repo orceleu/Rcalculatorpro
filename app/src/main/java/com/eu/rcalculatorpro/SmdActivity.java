@@ -8,14 +8,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Objects;
 
 public class SmdActivity extends AppCompatActivity {
-   TextView valueOut1,valueOut2,valueOut3,valueOut4,tvSmdohm;
+   TextView valueOut1,valueOut2,valueOut3,valueOut4, tvSmdOhm;
     CardView smdClear;
     CardView smd0;
     CardView smd1;
@@ -57,7 +56,7 @@ public class SmdActivity extends AppCompatActivity {
         smd7=findViewById(R.id.smd7);
         smd8=findViewById(R.id.smd8);
         smd9=findViewById(R.id.smd9);
-        tvSmdohm=findViewById(R.id.tvSmdohm);
+        tvSmdOhm =findViewById(R.id.tvSmdohm);
 
         smdZ=findViewById(R.id.smdZ);
         smdLine=findViewById(R.id.smdLine);
@@ -89,7 +88,8 @@ public class SmdActivity extends AppCompatActivity {
         smd8.setOnClickListener(view -> initBtn("8",'8'));
         smd9.setOnClickListener(view -> initBtn("9",'9'));
         smdClear.setOnClickListener(view ->{ valueOut1.setText(""); valueOut2.setText("");valueOut3.setText("");valueOut4.setText("");
-            value1.setText(""); value2.setText("");value3.setText("");value4.setText("");tvSmdohm.setText("");
+            value1.setText(""); value2.setText("");value3.setText("");value4.setText("");
+            tvSmdOhm.setText("");
             first='0';
             second='0';
             third='0';
@@ -224,7 +224,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
 
-            tvSmdohm.setText("mΩ");
+            tvSmdOhm.setText("mΩ");
 
 
         }
@@ -278,7 +278,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
 
-            tvSmdohm.setText("Ω");
+            tvSmdOhm.setText("Ω");
 
 
         }
@@ -332,7 +332,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
 
-             tvSmdohm.setText("mΩ");
+             tvSmdOhm.setText("mΩ");
         }
         private void rResult2() {
 
@@ -383,7 +383,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
 
-        tvSmdohm.setText("Ω");
+        tvSmdOhm.setText("Ω");
 
 
     }
@@ -425,7 +425,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
         valueOut4.setText("mΩ");
-        tvSmdohm.setText("");
+        tvSmdOhm.setText("");
     }
         private void rResult1() {
         switch (first){
@@ -464,7 +464,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
         valueOut4.setText("Ω");
-        tvSmdohm.setText("");
+        tvSmdOhm.setText("");
     }
         private void mResult() {
         switch (first){
@@ -504,7 +504,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
     valueOut4.setText("mΩ");
-        tvSmdohm.setText("");
+        tvSmdOhm.setText("");
     }
         private void rResult() {
         switch (first){
@@ -543,7 +543,7 @@ public class SmdActivity extends AppCompatActivity {
 
 
         valueOut4.setText("Ω");
-        tvSmdohm.setText("");
+        tvSmdOhm.setText("");
     }
         private void resultat4() {
 
@@ -588,16 +588,26 @@ public class SmdActivity extends AppCompatActivity {
                 default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
             switch (fourth){
-                case '0':{valueOut4.setText("");tvSmdohm.setText("");}break;
-                case '1':{valueOut4.setText("0Ω");tvSmdohm.setText("");}break;
-                case '2':{valueOut4.setText("00Ω");tvSmdohm.setText("");}break;
-                case '3':{valueOut4.setText("kΩ");tvSmdohm.setText("");}break;
-                case '4':{valueOut4.setText("0kΩ");tvSmdohm.setText("");}break;
-                case '5':{valueOut4.setText("00kΩ");tvSmdohm.setText("");}break;
-                case '6':{valueOut4.setText("MΩ");tvSmdohm.setText("");}break;
-                case '7':{valueOut4.setText("0MΩ");tvSmdohm.setText("");}break;
-                case '8':{valueOut4.setText("00MΩ");tvSmdohm.setText("");}break;
-                case '9':{valueOut4.setText("GΩ");tvSmdohm.setText("");}break;
+                case '0':{valueOut4.setText("");
+                    tvSmdOhm.setText("");}break;
+                case '1':{valueOut4.setText("0Ω");
+                    tvSmdOhm.setText("");}break;
+                case '2':{valueOut4.setText("00Ω");
+                    tvSmdOhm.setText("");}break;
+                case '3':{valueOut4.setText("kΩ");
+                    tvSmdOhm.setText("");}break;
+                case '4':{valueOut4.setText("0kΩ");
+                    tvSmdOhm.setText("");}break;
+                case '5':{valueOut4.setText("00kΩ");
+                    tvSmdOhm.setText("");}break;
+                case '6':{valueOut4.setText("MΩ");
+                    tvSmdOhm.setText("");}break;
+                case '7':{valueOut4.setText("0MΩ");
+                    tvSmdOhm.setText("");}break;
+                case '8':{valueOut4.setText("00MΩ");
+                    tvSmdOhm.setText("");}break;
+                case '9':{valueOut4.setText("GΩ");
+                    tvSmdOhm.setText("");}break;
                 default: {Toast.makeText(this,"only R and M can be in first digit",Toast.LENGTH_SHORT).show();}}
 
 

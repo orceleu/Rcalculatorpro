@@ -7,7 +7,7 @@
         app:showAsAction="never"
         />
     <item android:id="@+id/valueToColorCtn"
-        android:title="@string/colorToValue"
+        android:title="@string/valueToColor"
         app:showAsAction="never"/>
 
     <item android:id="@+id/smdCtn"

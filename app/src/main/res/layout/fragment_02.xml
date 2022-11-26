@@ -61,7 +61,7 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout8"
-                android:layout_width="163dp"
+                android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/cornerresistance"

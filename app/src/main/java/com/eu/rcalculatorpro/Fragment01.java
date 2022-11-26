@@ -20,10 +20,10 @@ import java.util.List;
 
 public class Fragment01 extends Fragment {
 
-   private RelativeLayout relativeLayoutbande1;
-   private RelativeLayout relativeLayoutbande2;
-   private    RelativeLayout relativeLayoutbande3;
-    private RelativeLayout relativeLayoutbande4;
+   private RelativeLayout relativeLayoutBand1;
+   private RelativeLayout relativeLayoutBand2;
+   private    RelativeLayout relativeLayoutBand3;
+    private RelativeLayout relativeLayoutBand4;
     private TextView tvCtn1,tvCtn2,tvCtn3,tvCtn4;
     private EditText editText01;
     private int convert;
@@ -31,10 +31,10 @@ public class Fragment01 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view01 = inflater.inflate(R.layout.fragment_01, container, false);
-        relativeLayoutbande1 = view01.findViewById(R.id.value_color1band);
-        relativeLayoutbande2 = view01.findViewById(R.id.value_color2band);
-        relativeLayoutbande3 = view01.findViewById(R.id.value_color3band);
-        relativeLayoutbande4 = view01.findViewById(R.id.value_color4band);
+        relativeLayoutBand1 = view01.findViewById(R.id.value_color1band);
+        relativeLayoutBand2 = view01.findViewById(R.id.value_color2band);
+        relativeLayoutBand3 = view01.findViewById(R.id.value_color3band);
+        relativeLayoutBand4 = view01.findViewById(R.id.value_color4band);
         tvCtn1 = view01.findViewById(R.id.tvctn1);
         tvCtn2 = view01.findViewById(R.id.tvctn2);
         tvCtn3 = view01.findViewById(R.id.tvctn3);
@@ -90,15 +90,15 @@ public class Fragment01 extends Fragment {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        relativeLayoutbande4.setBackgroundColor(Color.parseColor("#E2E6E5"));tvCtn4.setText("");
+                        relativeLayoutBand4.setBackgroundColor(Color.parseColor("#E2E6E5"));tvCtn4.setText("");
 
                         break;
                     case 1:
-                        relativeLayoutbande4.setBackgroundColor(Color.parseColor("#8A8989"));tvCtn4.setText("silver");
+                        relativeLayoutBand4.setBackgroundColor(Color.parseColor("#8A8989"));tvCtn4.setText(R.string.silver);
                         break;
 
                     case 2:
-                        relativeLayoutbande4.setBackgroundColor(Color.parseColor("#B18603"));tvCtn4.setText("gold");
+                        relativeLayoutBand4.setBackgroundColor(Color.parseColor("#B18603"));tvCtn4.setText(R.string.gold);
 
                         break;
                 }
@@ -126,50 +126,50 @@ public class Fragment01 extends Fragment {
             Toast.makeText(getActivity(), "empty", Toast.LENGTH_LONG).show();
         } else {
             double y = Double.parseDouble(editText01.getText().toString());
-            double valueinitial = y * s;
-            String a = Double.toString(valueinitial);
+            double valueInitial = y * s;
+            String a = Double.toString(valueInitial);
 
 
             //pour la verification de l'entrer
 
-           try {if (valueinitial >= 100 && a.charAt(2) != '0') { Toast.makeText(getActivity(), "wong code, closest resistor is...", Toast.LENGTH_LONG).show();}
+           try {if (valueInitial >= 100 && a.charAt(2) != '0') { Toast.makeText(getActivity(), "wong code, closest resistor is...", Toast.LENGTH_LONG).show();}
                       } catch (Exception ignored) {
                 }
 
            // pour les nombre decimale <1
-                if (valueinitial < 1) {
+                if (valueInitial < 1) {
 
 
                     switch (a.charAt(2)) {
 
                         case '1':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));
-                              tvCtn1.setText("brown");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#4C1A0B"));
+                              tvCtn1.setText(R.string.brown);
                             break;
                         case '2':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));
-                            tvCtn1.setText("red");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#F60202"));
+                            tvCtn1.setText(R.string.red);
                             break;
                         case '3':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn1.setText("orange");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn1.setText(R.string.orange);
                             break;
                         case '4':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn1.setText("jaunt");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn1.setText(R.string.jaunt);
                             break;
                         case '5':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn1.setText("green");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn1.setText(R.string.green);
                             break;
                         case '6':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn1.setText("blue");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn1.setText(R.string.blue);
                             break;
                         case '7':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn1.setText("purple");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn1.setText(R.string.purple);
                             break;
                         case '8':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn1.setText("gray");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn1.setText(R.string.gray);
                             break;
                         case '9':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn1.setText("white");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn1.setText(R.string.white);
 
                             break;
 
@@ -180,75 +180,75 @@ public class Fragment01 extends Fragment {
                         switch (a.charAt(3)) {
 
                             case '0':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText("black");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText(R.string.black);
                                 break;
                             case '1':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText("brown");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText(R.string.brown);
 
                                 break;
                             case '2':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText("red");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText(R.string.red);
                                 break;
                             case '3':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText("orange");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText(R.string.orange);
                                 break;
                             case '4':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText("jaunt");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText(R.string.jaunt);
                                 break;
                             case '5':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText("green");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText(R.string.green);
                                 break;
                             case '6':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText("blue");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText(R.string.blue);
                                 break;
                             case '7':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText("purple");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText(R.string.purple);
                                 break;
                             case '8':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText("gray");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText(R.string.gray);
                                 break;
                             case '9':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText("white");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText(R.string.white);
 
                                 break;
                         }
                     } catch (Exception e) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText("black");
+                        relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText(R.string.black);
                     }
 
-                    relativeLayoutbande3.setBackgroundColor(Color.parseColor("#8A8989"));tvCtn3.setText("silver");
+                    relativeLayoutBand3.setBackgroundColor(Color.parseColor("#8A8989"));tvCtn3.setText(R.string.silver);
                 } else {
 
 
                     switch (a.charAt(0)) {
 
                         case '1':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn1.setText("brown");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn1.setText(R.string.brown);
 
                             break;
                         case '2':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#F60202"));tvCtn1.setText("red");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#F60202"));tvCtn1.setText(R.string.red);
                             break;
                         case '3':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn1.setText("orange");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn1.setText(R.string.orange);
                             break;
                         case '4':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn1.setText("jaunt");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn1.setText(R.string.jaunt);
                             break;
                         case '5':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn1.setText("green");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn1.setText(R.string.green);
                             break;
                         case '6':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn1.setText("blue");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn1.setText(R.string.blue);
                             break;
                         case '7':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn1.setText("purple");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn1.setText(R.string.purple);
                             break;
                         case '8':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn1.setText("gray");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn1.setText(R.string.gray);
                             break;
                         case '9':
-                            relativeLayoutbande1.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn1.setText("white");
+                            relativeLayoutBand1.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn1.setText(R.string.white);
 
                             break;
 
@@ -257,35 +257,35 @@ public class Fragment01 extends Fragment {
                         switch (a.charAt(1)) {
 
                             case '0':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText("black");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText(R.string.black);
                                 break;
                             case '1':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText("brown");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText(R.string.brown);
 
                                 break;
                             case '2':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText("red");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText(R.string.red);
                                 break;
                             case '3':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText("orange");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText(R.string.orange);
                                 break;
                             case '4':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText("jaunt");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText(R.string.jaunt);
                                 break;
                             case '5':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText("green");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText(R.string.green);
                                 break;
                             case '6':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText("blue");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText(R.string.blue);
                                 break;
                             case '7':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText("purple");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText(R.string.purple);
                                 break;
                             case '8':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText("gray");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText(R.string.gray);
                                 break;
                             case '9':
-                                relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText("white");
+                                relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText(R.string.white);
 
                                 break;
                         }
@@ -296,35 +296,35 @@ public class Fragment01 extends Fragment {
 
 
                                 case '0':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText("black");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText(R.string.black);
                                     break;
                                 case '1':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText("brown");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn2.setText(R.string.brown);
 
                                     break;
                                 case '2':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText("red");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#F60202"));tvCtn2.setText(R.string.red);
                                     break;
                                 case '3':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText("orange");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn2.setText(R.string.orange);
                                     break;
                                 case '4':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText("jaunt");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn2.setText(R.string.jaunt);
                                     break;
                                 case '5':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText("green");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn2.setText(R.string.green);
                                     break;
                                 case '6':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText("blue");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn2.setText(R.string.blue);
                                     break;
                                 case '7':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText("purple");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#D703FB"));tvCtn2.setText(R.string.purple);
                                     break;
                                 case '8':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText("gray");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#9C9A9A"));tvCtn2.setText(R.string.gray);
                                     break;
                                 case '9':
-                                    relativeLayoutbande2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText("white");
+                                    relativeLayoutBand2.setBackgroundColor(Color.parseColor("#FDFBFB"));tvCtn2.setText(R.string.white);
 
                                     break;
                             }
@@ -332,24 +332,26 @@ public class Fragment01 extends Fragment {
                         }
 
                     } catch (Exception e) {
-                        relativeLayoutbande2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText("black");
+                        relativeLayoutBand2.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn2.setText(R.string.black);
                     }
 
 
-                    if (valueinitial < 10) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#B18603"));tvCtn3.setText("gold");
-                    } else if (valueinitial < 100) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn3.setText("black");
-                    } else if (valueinitial < 1000) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn3.setText("brown");
-                    } else if (valueinitial < 10000) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#F60202"));tvCtn3.setText("red");
-                    } else if (valueinitial < 100000) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn3.setText("orange");
-                    } else if (valueinitial < 1000000) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn3.setText("jaunt");
-                    } else if (valueinitial < 10000000) {
-                        relativeLayoutbande3.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn3.setText("green");
+                    if (valueInitial < 10) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#B18603"));tvCtn3.setText(R.string.gold);
+                    } else if (valueInitial < 100) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#0B0303"));tvCtn3.setText(R.string.black);
+                    } else if (valueInitial < 1000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#4C1A0B"));tvCtn3.setText(R.string.brown);
+                    } else if (valueInitial < 10000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#F60202"));tvCtn3.setText(R.string.red);
+                    } else if (valueInitial < 100000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#FF5722"));tvCtn3.setText(R.string.orange);
+                    } else if (valueInitial < 1000000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#FFC107"));tvCtn3.setText(R.string.jaunt);
+                    } else if (valueInitial < 10000000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#0CF115"));tvCtn3.setText(R.string.green);
+                    }else if (valueInitial < 100000000) {
+                        relativeLayoutBand3.setBackgroundColor(Color.parseColor("#0228FA"));tvCtn3.setText(R.string.blue);
                     }
 
 

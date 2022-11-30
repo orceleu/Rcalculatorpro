@@ -22,9 +22,9 @@ import java.util.Objects;
 public class NumberToColor extends AppCompatActivity {
 
 
-    Fragment01 fragment01Action;
-    Fragment02 fragment02Action;
-    Fragment03 fragment03Action;
+    FourBandsValue fourBandsValueAction;
+    FiveBandsValue fiveBandsValueAction;
+    SixBandsValue sixBandsValueAction;
     Spinner spinner1;
     List<String> name1;
 
@@ -38,9 +38,9 @@ public class NumberToColor extends AppCompatActivity {
 
 
         spinner1 = findViewById(R.id.spinner2);
-        fragment01Action = new Fragment01();
-        fragment02Action = new Fragment02();
-        fragment03Action = new Fragment03();
+        fourBandsValueAction = new FourBandsValue();
+        fiveBandsValueAction = new FiveBandsValue();
+        sixBandsValueAction = new SixBandsValue();
 
         name1 = new ArrayList<>();
         name1.add("4 bands");
@@ -55,14 +55,14 @@ public class NumberToColor extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        selectfragment1(fragment01Action);
+                        selectfragment1(fourBandsValueAction);
                         break;
                     case 1:
-                        selectfragment1(fragment02Action);
+                        selectfragment1(fiveBandsValueAction);
                         break;
 
                     case 2:
-                        selectfragment1(fragment03Action);
+                        selectfragment1(sixBandsValueAction);
                         break;
 
 

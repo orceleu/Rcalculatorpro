@@ -23,9 +23,9 @@ public class ColorToNumber extends AppCompatActivity {
 
 
 
-  Fragment1 fragment1Action;
-  Fragment2 fragment2Action;
-   Fragment3 fragment3Action;
+  FourBandsColor fourBandsColorAction;
+  FiveBandsColor fiveBandsColorAction;
+   SixBandsColor sixBandsColorAction;
   Spinner spinner;
    List<String> name;
 
@@ -41,9 +41,9 @@ public class ColorToNumber extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         spinner = findViewById(R.id.spinner1);
-        fragment1Action = new Fragment1();
-        fragment2Action = new Fragment2();
-        fragment3Action = new Fragment3();
+        fourBandsColorAction = new FourBandsColor();
+        fiveBandsColorAction = new FiveBandsColor();
+        sixBandsColorAction = new SixBandsColor();
 
         name = new ArrayList<>();
         name.add("4 bands");
@@ -58,12 +58,12 @@ public class ColorToNumber extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i) {
                     case 0:
-                        selectfragment(fragment1Action);break;
+                        selectfragment(fourBandsColorAction);break;
                     case 1:
-                        selectfragment(fragment2Action);break;
+                        selectfragment(fiveBandsColorAction);break;
 
                     case 2:
-                       selectfragment(fragment3Action);break;
+                       selectfragment(sixBandsColorAction);break;
 
 
                 }

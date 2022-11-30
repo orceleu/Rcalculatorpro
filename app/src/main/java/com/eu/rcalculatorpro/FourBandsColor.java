@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-public class Fragment1 extends Fragment {
+public class FourBandsColor extends Fragment {
 
     TextView tv_1;
     TextView tv_point;
@@ -74,7 +74,7 @@ public class Fragment1 extends Fragment {
     @Override
     public View  onCreateView(LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState) {
-        View view1=inflater.inflate(R.layout.fragment_1, container, false);
+        View view1=inflater.inflate(R.layout.fourbandscolor, container, false);
 
         // Inflate the layout for this fragment
 

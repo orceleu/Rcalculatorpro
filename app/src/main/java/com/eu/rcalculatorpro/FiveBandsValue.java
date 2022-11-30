@@ -20,7 +20,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fragment02 extends Fragment {
+public class FiveBandsValue extends Fragment {
     private RelativeLayout relativeLayoutBand1;
     private RelativeLayout relativeLayoutBand2;
     private RelativeLayout relativeLayoutBand3;
@@ -33,7 +33,7 @@ public class Fragment02 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view02 = inflater.inflate(R.layout.fragment_02, container, false);
+        View view02 = inflater.inflate(R.layout.fivebandsvalue, container, false);
 
 
         relativeLayoutBand1 = view02.findViewById(R.id.value_color01band);

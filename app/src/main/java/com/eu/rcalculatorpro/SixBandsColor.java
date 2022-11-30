@@ -2,105 +2,121 @@ package com.eu.rcalculatorpro;
 
 import android.graphics.Color;
 import android.os.Bundle;
+
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class Fragment2 extends Fragment {
-    private  RelativeLayout  layoutband1,layoutband2,layoutband3,layoutmult,layouttolerance;
-   private TextView tvband1;
+public class SixBandsColor extends Fragment {
+    private RelativeLayout layoutband1,layoutband2,layoutband3,layoutmult,layouttolerance,relativeLayoutTemp;
+    private TextView tvband1;
     private TextView tvband2;
     private TextView tvband3;
     private TextView tvmult;
     private TextView tvtolerance;
     private TextView tvPointor;
     private TextView tvpointargent;
+    private TextView temp;
 
 
     @Override
-    public View  onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-      View view2= inflater.inflate(R.layout.fragment_2, container, false);
+        // Inflate the layout for this fragment
+        View view3= inflater.inflate(R.layout.sixbandscolor, container, false);
 
         // pour les layout
-      layoutband1=view2.findViewById(R.id.layout01);
-      layoutband2=view2.findViewById(R.id.layout02);
-      layoutband3=view2.findViewById(R.id.layout03);
-      layoutmult=view2.findViewById(R.id.layout04);
-      layouttolerance=view2.findViewById(R.id.layout05);
+        layoutband1=view3.findViewById(R.id.layout001);
+        layoutband2=view3.findViewById(R.id.layout002);
+        layoutband3=view3.findViewById(R.id.layout003);
+        layoutmult=view3.findViewById(R.id.layout004);
+        layouttolerance=view3.findViewById(R.id.layout005);
+        relativeLayoutTemp=view3.findViewById(R.id.layout006);
 
-      // pour les textes
+        // pour les textes
 
-        tvband1=view2.findViewById(R.id.tv_1band01);
-        tvband2=view2.findViewById(R.id.tv_2band01);
-        tvband3=view2.findViewById(R.id.tv_3band01);
-        tvmult=view2.findViewById(R.id.tv_mult01);
-        tvtolerance=view2.findViewById(R.id.tv_pourcentage01);
-        tvpointargent=view2.findViewById(R.id.tv_point_argent01);
-        tvPointor=view2.findViewById(R.id.tv_point_or01);
-        TextView tvohms = view2.findViewById(R.id.tv_ohms01);
+        tvband1=view3.findViewById(R.id.tv_1band001);
+        tvband2=view3.findViewById(R.id.tv_2band001);
+        tvband3=view3.findViewById(R.id.tv_3band001);
+        tvmult=view3.findViewById(R.id.tv_mult001);
+        tvtolerance=view3.findViewById(R.id.tv_pourcentage001);
+        tvpointargent=view3.findViewById(R.id.tv_point_argent001);
+        temp=view3.findViewById(R.id.tv_temp001);
+        tvPointor=view3.findViewById(R.id.tv_point_or001);
+        TextView tvohms = view3.findViewById(R.id.tv_ohms001);
 
-      // for botton
+        // for botton
 
-        CardView btn1_band1 = view2.findViewById(R.id.btn_01band_marron);
-        CardView btn2_band1 = view2.findViewById(R.id.btn_01band_rouge);
-        CardView btn3_band1 = view2.findViewById(R.id.btn_01band_orange);
-        CardView btn4_band1 = view2.findViewById(R.id.btn_01band_jaune);
-        CardView btn5_band1 = view2.findViewById(R.id.btn_01band_vert);
-        CardView btn6_band1 = view2.findViewById(R.id.btn_01band_bleu);
-        CardView btn7_band1 = view2.findViewById(R.id.btn_01band_violet);
-        CardView btn8_band1 = view2.findViewById(R.id.btn_01band_gris);
-        CardView btn9_band1 = view2.findViewById(R.id.btn_01band_blanc);
+        CardView btn1_band1 = view3.findViewById(R.id.btn_001band_marron);
+        CardView btn2_band1 = view3.findViewById(R.id.btn_001band_rouge);
+        CardView btn3_band1 = view3.findViewById(R.id.btn_001band_orange);
+        CardView btn4_band1 = view3.findViewById(R.id.btn_001band_jaune);
+        CardView btn5_band1 = view3.findViewById(R.id.btn_001band_vert);
+        CardView btn6_band1 = view3.findViewById(R.id.btn_001band_bleu);
+        CardView btn7_band1 = view3.findViewById(R.id.btn_001band_violet);
+        CardView btn8_band1 = view3.findViewById(R.id.btn_001band_gris);
+        CardView btn9_band1 = view3.findViewById(R.id.btn_001band_blanc);
 
-        CardView btn0_band2 = view2.findViewById(R.id.btn_02band_noir);
-        CardView btn1_band2 = view2.findViewById(R.id.btn_02band_marron);
-        CardView btn2_band2 = view2.findViewById(R.id.btn_02band_rouge);
-        CardView btn3_band2 = view2.findViewById(R.id.btn_02band_orange);
-        CardView btn4_band2 = view2.findViewById(R.id.btn_02band_jaune);
-        CardView btn5_band2 = view2.findViewById(R.id.btn_02band_vert);
-        CardView btn6_band2 = view2.findViewById(R.id.btn_02band_bleu);
-        CardView btn7_band2 = view2.findViewById(R.id.btn_02band_violet);
-        CardView btn8_band2 = view2.findViewById(R.id.btn_02band_gris);
-        CardView btn9_band2 = view2.findViewById(R.id.btn_02band_blanc);
+        CardView btn0_band2 = view3.findViewById(R.id.btn_002band_noir);
+        CardView btn1_band2 = view3.findViewById(R.id.btn_002band_marron);
+        CardView btn2_band2 = view3.findViewById(R.id.btn_002band_rouge);
+        CardView btn3_band2 = view3.findViewById(R.id.btn_002band_orange);
+        CardView btn4_band2 = view3.findViewById(R.id.btn_002band_jaune);
+        CardView btn5_band2 = view3.findViewById(R.id.btn_002band_vert);
+        CardView btn6_band2 = view3.findViewById(R.id.btn_002band_bleu);
+        CardView btn7_band2 = view3.findViewById(R.id.btn_002band_violet);
+        CardView btn8_band2 = view3.findViewById(R.id.btn_002band_gris);
+        CardView btn9_band2 = view3.findViewById(R.id.btn_002band_blanc);
 
-        CardView btn0_band3 = view2.findViewById(R.id.btn_03band_noir);
-        CardView btn1_band3 = view2.findViewById(R.id.btn_03band_marron);
-        CardView btn2_band3 = view2.findViewById(R.id.btn_03band_rouge);
-        CardView btn3_band3 = view2.findViewById(R.id.btn_03band_orange);
-        CardView btn4_band3 = view2.findViewById(R.id.btn_03band_jaune);
-        CardView btn5_band3 = view2.findViewById(R.id.btn_03band_vert);
-        CardView btn6_band3 = view2.findViewById(R.id.btn_03band_bleu);
-        CardView btn7_band3 = view2.findViewById(R.id.btn_03band_violet);
-        CardView btn8_band3 = view2.findViewById(R.id.btn_03band_gris);
-        CardView btn9_band3 = view2.findViewById(R.id.btn_03band_blanc);
+        CardView btn0_band3 = view3.findViewById(R.id.btn_003band_noir);
+        CardView btn1_band3 = view3.findViewById(R.id.btn_003band_marron);
+        CardView btn2_band3 = view3.findViewById(R.id.btn_003band_rouge);
+        CardView btn3_band3 = view3.findViewById(R.id.btn_003band_orange);
+        CardView btn4_band3 = view3.findViewById(R.id.btn_003band_jaune);
+        CardView btn5_band3 = view3.findViewById(R.id.btn_003band_vert);
+        CardView btn6_band3 = view3.findViewById(R.id.btn_003band_bleu);
+        CardView btn7_band3 = view3.findViewById(R.id.btn_003band_violet);
+        CardView btn8_band3 = view3.findViewById(R.id.btn_003band_gris);
+        CardView btn9_band3 = view3.findViewById(R.id.btn_003band_blanc);
 
-        CardView btnmult0_band4 = view2.findViewById(R.id.btn_multiplicator_noir01);
-        CardView btnmult1_band4 = view2.findViewById(R.id.btn_multiplicator_marron01);
-        CardView btnmult2_band4 = view2.findViewById(R.id.btn_multiplicator_rouge01);
-        CardView btnmult3_band4 = view2.findViewById(R.id.btn_multiplicator_orange01);
-        CardView btnmult4_band4 = view2.findViewById(R.id.btn_multiplicator_jaune01);
-        CardView btnmult5_band4 = view2.findViewById(R.id.btn_multiplicator_vert01);
-        CardView btnmult6_band4 = view2.findViewById(R.id.btn_multiplicator_bleu01);
-        CardView btnmultOr_band4 = view2.findViewById(R.id.btn_point_or01);
-        CardView btnmultArgent_band4 = view2.findViewById(R.id.btn_point_argent01);
+        CardView btnmult0_band4 = view3.findViewById(R.id.btn_multiplicator_noir001);
+        CardView btnmult1_band4 = view3.findViewById(R.id.btn_multiplicator_marron001);
+        CardView btnmult2_band4 = view3.findViewById(R.id.btn_multiplicator_rouge001);
+        CardView btnmult3_band4 = view3.findViewById(R.id.btn_multiplicator_orange001);
+        CardView btnmult4_band4 = view3.findViewById(R.id.btn_multiplicator_jaune001);
+        CardView btnmult5_band4 = view3.findViewById(R.id.btn_multiplicator_vert001);
+        CardView btnmult6_band4 = view3.findViewById(R.id.btn_multiplicator_bleu001);
+        CardView btnmultOr_band4 = view3.findViewById(R.id.btn_point_or001);
+        CardView btnmultArgent_band4 = view3.findViewById(R.id.btn_point_argent001);
 
-        CardView btntolerance1_band5 = view2.findViewById(R.id.btn_tolerance_marron01);
-        CardView btntolerance2_band5 = view2.findViewById(R.id.btn_tolerance_rouge01);
-        CardView btntolerance3_band5 = view2.findViewById(R.id.btn_tolerance_orange01);
-        CardView btntolerance4_band5 = view2.findViewById(R.id.btn_tolerance_jaune01);
-        CardView btntolerance5_band5 = view2.findViewById(R.id.btn_tolerance_vert01);
-        CardView btntolerance6_band5 = view2.findViewById(R.id.btn_tolerance_bleu01);
-        CardView btntolerance7_band5 = view2.findViewById(R.id.btn_tolerance_violet01);
-        CardView btntolerance8_band5 = view2.findViewById(R.id.btn_tolerance_gris01);
-        CardView btntoleranceArgent_band5 = view2.findViewById(R.id.btn_prc_argent01);
-        CardView btntoleranceOr_band5 = view2.findViewById(R.id.btn_prc_or01);
+        CardView btntolerance1_band5 = view3.findViewById(R.id.btn_tolerance_marron001);
+        CardView btntolerance2_band5 = view3.findViewById(R.id.btn_tolerance_rouge001);
+        CardView btntolerance3_band5 = view3.findViewById(R.id.btn_tolerance_orange001);
+        CardView btntolerance4_band5 = view3.findViewById(R.id.btn_tolerance_jaune001);
+        CardView btntolerance5_band5 = view3.findViewById(R.id.btn_tolerance_vert001);
+        CardView btntolerance6_band5 = view3.findViewById(R.id.btn_tolerance_bleu001);
+        CardView btntolerance7_band5 = view3.findViewById(R.id.btn_tolerance_violet001);
+        CardView btntolerance8_band5 = view3.findViewById(R.id.btn_tolerance_gris001);
+        CardView btntoleranceArgent_band5 = view3.findViewById(R.id.btn_prc_argent001);
+        CardView btntoleranceOr_band5 = view3.findViewById(R.id.btn_prc_or001);
+
+        CardView btntolerance0_band6 = view3.findViewById(R.id.btn_temp_noir);
+        CardView btntolerance1_band6 = view3.findViewById(R.id.btn_temp_marron);
+        CardView btntolerance2_band6 = view3.findViewById(R.id.btn_temp_rouge);
+        CardView btntolerance3_band6 = view3.findViewById(R.id.btn_temp_orange);
+        CardView btntolerance4_band6 = view3.findViewById(R.id.btn_temp_jaune);
+        CardView btntolerance5_band6 = view3.findViewById(R.id.btn_temp_vert);
+        CardView btntolerance6_band6 = view3.findViewById(R.id.btn_temp_bleu);
+        CardView btntolerance7_band6 = view3.findViewById(R.id.btn_temp_violet);
+        CardView btntolerance8_band6 = view3.findViewById(R.id.btn_temp_gris);
 
 
-         // init des donnees
+        // init des donnees
 
 
 
@@ -117,7 +133,7 @@ public class Fragment2 extends Fragment {
 
 
 
-         //for point argent
+        //for point argent
         btnmultArgent_band4.setOnClickListener(view -> {tvmult.setText("");tvpointargent.setText(".");tvPointor.setText("");layoutmult.setBackgroundColor(Color.parseColor("#8A8989" ));
         });
 
@@ -136,7 +152,7 @@ public class Fragment2 extends Fragment {
 
 
 
-         //for point or
+        //for point or
         btnmultOr_band4.setOnClickListener(view -> {tvPointor.setText(".");tvmult.setText("");tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#B18603" ));
         });
 
@@ -178,15 +194,23 @@ public class Fragment2 extends Fragment {
         btntolerance7_band5.setOnClickListener(view -> {tvtolerance.setText("+-0.1%");layouttolerance.setBackgroundColor(Color.parseColor("#D703FB"  ));});
         btntolerance8_band5.setOnClickListener(view -> {tvtolerance.setText("+-0.01%");layouttolerance.setBackgroundColor(Color.parseColor("#9C9A9A" ));});
 
+        btntolerance0_band6.setOnClickListener(view -> {temp.setText("250ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#0B0303" ));});
+        btntolerance1_band6.setOnClickListener(view -> {temp.setText("100ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#4C1A0B" ));});
+        btntolerance2_band6.setOnClickListener(view -> {temp.setText("50ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#F60202"  ));});
+        btntolerance3_band6.setOnClickListener(view -> {temp.setText("15ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#FF5722" ));});
+        btntolerance4_band6.setOnClickListener(view -> {temp.setText("25ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#FFC107" ));});
+        btntolerance5_band6.setOnClickListener(view -> {temp.setText("20ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#0CF115" ));});
+        btntolerance6_band6.setOnClickListener(view -> {temp.setText("10ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#0228FA" ));});
+        btntolerance7_band6.setOnClickListener(view -> {temp.setText("5ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#D703FB"  ));});
+        btntolerance8_band6.setOnClickListener(view -> {temp.setText("1ppm/ºC");relativeLayoutTemp.setBackgroundColor(Color.parseColor("#9C9A9A" ));});
 
         tvohms.setText("Ω");
 
 
 
 
-        return view2;
+        return view3;
 
 
     }
-
 }

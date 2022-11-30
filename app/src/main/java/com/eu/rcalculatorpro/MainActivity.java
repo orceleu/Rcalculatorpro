@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 CardView cardView1;
 CardView cardView2;
 CardView smd;
+CardView calculDivers;
     private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ CardView smd;
             cardView1=findViewById(R.id.colorToNumber);
             cardView2=findViewById(R.id.numberToColor);
             smd=findViewById(R.id.SMD);
+            calculDivers=findViewById(R.id.CalculDivers);
 
 
         cardView1.setOnClickListener(view -> {
@@ -55,6 +57,10 @@ CardView smd;
 
         smd.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this,SmdActivity.class);
+            startActivity(intent);
+        });
+    calculDivers.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this,CalculDivers.class);
             startActivity(intent);
         });
     }

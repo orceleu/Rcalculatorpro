@@ -5,113 +5,128 @@
     android:layout_height="wrap_content"
     tools:context=".URIP">
 
-    <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="laisser deux champs vide pour calculer leurs valeurs" />
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
         android:orientation="vertical">
-    <LinearLayout
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:orientation="horizontal">
-    <EditText
-        android:id="@+id/voltage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:digits="0123456789."
-        android:hint="Enter value of U"
-        android:inputType="numberDecimal"/>
+        <LinearLayout
 
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:text="Volts"
-            android:textColor="@color/black"/>
+            android:layout_marginTop="26dp"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="Enter value of U"
+                android:inputType="numberDecimal"
+                android:maxLength="7" />
 
-    <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="Volts"
+                android:textColor="@color/black" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:orientation="horizontal">
-    <EditText
-        android:id="@+id/resistance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:digits="0123456789."
-        android:hint="Enter value of R"
-        android:inputType="numberDecimal"/>
+        </LinearLayout>
 
-        <TextView
+        <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:text="Ohms"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
-    <LinearLayout
+            <EditText
+                android:id="@+id/resistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="Enter value of R"
+                android:inputType="numberDecimal"
+                android:maxLength="7" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:orientation="horizontal">
-    <EditText
-        android:id="@+id/current"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:digits="0123456789."
-        android:hint="Enter value of I"
-        android:inputType="numberDecimal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="Ohms"
+                android:textColor="@color/black" />
 
-        <TextView
+        </LinearLayout>
+
+        <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:text="Amps"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
-    <LinearLayout
+            <EditText
+                android:id="@+id/current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="Enter value of I"
+                android:inputType="numberDecimal"
+                android:maxLength="7" />
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:orientation="horizontal">
-    <EditText
-        android:id="@+id/wattage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:digits="0123456789."
-        android:hint="Enter value of W"
-        android:inputType="numberDecimal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="Amps"
+                android:textColor="@color/black" />
 
-        <TextView
+        </LinearLayout>
+
+        <LinearLayout
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:text="Watts"
-            android:textColor="@color/black"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/wattage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:digits="0123456789."
+                android:hint="Enter value of W"
+                android:inputType="numberDecimal"
+                android:maxLength="7" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="Watts"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/computeURIP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:text="compute"
-            />
+            android:text="compute" />
+  <Button
+            android:id="@+id/ClearURIP"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="CLEAR" />
 
     </LinearLayout>
 

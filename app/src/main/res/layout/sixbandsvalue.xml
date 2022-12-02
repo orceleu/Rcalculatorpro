@@ -3,12 +3,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SixBandsValue">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvctn001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="brown"
+                android:textColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/tvctn002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="black"
+                android:textColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/tvctn003"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="black"
+                android:textColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/tvctn004"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="black"
+                android:textColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/tvctn005"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="gold"
+                android:textColor="@color/teal_200"/>
+            <TextView
+                android:id="@+id/tvctn006"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="red"
+                android:textColor="@color/teal_200"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/cornerresistance"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.21">
+
+
+                <RelativeLayout
+                    android:id="@+id/value_color001band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="30dp"
+                    android:background="#4C1A0B" />
+
+                <RelativeLayout
+                    android:id="@+id/value_color002band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/value_color003band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/black" />
+                <RelativeLayout
+                    android:id="@+id/value_color004band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/black" />
+
+
+                <RelativeLayout
+                    android:id="@+id/value_color005band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="19dp"
+                    android:background="#B18603" />
+                <RelativeLayout
+                    android:id="@+id/value_color006band"
+                    android:layout_width="14dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@color/black" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="89dp"
+                android:layout_height="5dp"
+                android:background="#86868A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout8" />
+
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="89dp"
+                android:layout_height="5dp"
+                android:background="#86868A"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout8"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout8" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/editText002"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="enter value"
+                android:hint=" 10"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                />
+            <Spinner
+                android:id="@+id/selector002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                />
+            <Spinner
+                android:id="@+id/tolerancectn002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+            <Spinner
+                android:id="@+id/tolerancectnTemp002"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonCompute002"
+            android:layout_width="268dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="compute"
+            />
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

@@ -50,7 +50,7 @@ public class FourBandsValue extends Fragment {
         name01.add("Ω");
         name01.add("KΩ");
         name01.add("MΩ");
-        ArrayAdapter<String> arrayAdapter01 = new ArrayAdapter<>(getActivity(), R.layout.item, name01);
+        ArrayAdapter<String> arrayAdapter01 = new ArrayAdapter<>(getActivity(), R.layout.bolditem, name01);
         arrayAdapter01.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner01.setAdapter(arrayAdapter01);
 
@@ -81,7 +81,7 @@ public class FourBandsValue extends Fragment {
         name02.add("+-20%");
         name02.add("+-10%");
         name02.add("+-5%");
-        ArrayAdapter<String> arrayAdapter02 = new ArrayAdapter<>(getActivity(), R.layout.item, name02);
+        ArrayAdapter<String> arrayAdapter02 = new ArrayAdapter<>(getActivity(), R.layout.bolditem, name02);
         arrayAdapter02.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner02.setAdapter(arrayAdapter02);
 

@@ -8,6 +8,7 @@
 
     <TextView
         android:layout_width="match_parent"
+        android:layout_margin="10dp"
         android:layout_height="match_parent"
         android:text="laisser deux champs vide pour calculer leurs valeurs" />
 
@@ -20,14 +21,16 @@
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginTop="26dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/voltage"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
                 android:hint="Enter value of U"
@@ -45,13 +48,15 @@
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/resistance"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
                 android:hint="Enter value of R"
@@ -69,13 +74,15 @@
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/current"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
                 android:hint="Enter value of I"
@@ -93,13 +100,15 @@
 
         <LinearLayout
 
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/wattage"
-                android:layout_width="wrap_content"
+                android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
                 android:hint="Enter value of W"
@@ -114,20 +123,36 @@
                 android:textColor="@color/black" />
 
         </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="10dp"
+         android:layout_marginTop="10dp"
+         android:layout_marginEnd="10dp"
+         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/computeURIP"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:text="compute" />
+         <Button
+             android:id="@+id/computeURIP"
+             android:layout_width="match_parent"
+             android:layout_height="48dp"
+             android:layout_weight="1"
+             android:text="compute" />
   <Button
             android:id="@+id/ClearURIP"
             android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_weight="2"
             android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
             android:text="CLEAR" />
+     </LinearLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_marginTop="5dp"
+            android:layout_marginBottom="125dp"
+            android:src="@drawable/formule1"
+           />
     </LinearLayout>
 
 </FrameLayout>

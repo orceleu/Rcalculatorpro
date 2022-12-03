@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import java.util.Objects;
+
 public class CalculDivers extends AppCompatActivity {
     URIP uripAction;
     LED_resistor LEDAction;
@@ -23,6 +25,8 @@ public class CalculDivers extends AppCompatActivity {
         radioGroup=findViewById(R.id.RadioGroup);
         radioButtonOhmsLaw=findViewById(R.id.ohmLaw);
         radioButtonLed=findViewById(R.id.LED_resistor);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Ohm law");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         uripAction = new URIP();
         LEDAction= new LED_resistor();

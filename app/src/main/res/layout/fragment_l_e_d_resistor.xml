@@ -38,13 +38,10 @@
             android:id="@+id/textView_result_Led"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="result"
-            app:layout_constraintBottom_toTopOf="@+id/editText_Led_V"
+            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.313"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.514" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editText_Led_ma"
@@ -58,6 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/editText_nbre_Led" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="voltage:"
@@ -75,8 +73,8 @@
             android:text="current LED:"
             app:layout_constraintBottom_toBottomOf="@+id/editText_Led_ma"
             app:layout_constraintEnd_toStartOf="@+id/editText_Led_ma"
-            app:layout_constraintHorizontal_bias="0.34"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/editText_Led_ma" />
 
         <TextView
@@ -87,21 +85,23 @@
             android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@+id/editText_Led_ma"
             app:layout_constraintEnd_toStartOf="@+id/editText_nbre_Led"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText_Led_V" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/editText_Led_V"
+            app:layout_constraintVertical_bias="0.518" />
 
         <EditText
             android:id="@+id/editText_Led_V"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
             android:digits="0123456789."
             android:hint="input V"
             android:inputType="numberDecimal"
+            android:layout_marginTop="25dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.394"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_result_Led" />
 
         <EditText
             android:id="@+id/editText_nbre_Led"
@@ -117,11 +117,13 @@
 
         <Button
             android:id="@+id/compute_Led"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="42dp"
             android:text="COMPUTE"
-
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editText_Led_ma" />
@@ -130,11 +132,11 @@
             android:id="@+id/spinner_Type_led"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/editText_Led_ma"
+            app:layout_constraintBottom_toBottomOf="@+id/editText_Led_ma"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.82"
             app:layout_constraintStart_toEndOf="@+id/editText_nbre_Led"
-            app:layout_constraintTop_toBottomOf="@+id/editText_Led_V"
+            app:layout_constraintTop_toTopOf="@+id/editText_Led_ma"
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -182,11 +182,11 @@ public class FourBandsColor extends Fragment {
         });
         btn_mult2.setOnClickListener(view ->{ tv_multip1.setText("0"); tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#4C1A0B" ));
         });
-        btn_mult3.setOnClickListener(view -> {tv_multip1.setText("00");tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#F60202" ));
+        btn_mult3.setOnClickListener(view -> {tv_multip1.setText("K");tv_point.setText(".");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#F60202" ));
         });
         btn_mult4.setOnClickListener(view -> {tv_multip1.setText("k");  tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#FF5722"  ));});
-        btn_mult5.setOnClickListener(view -> {tv_multip1.setText("0k"); tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#FFC107" ));});
-        btn_mult6.setOnClickListener(view -> {tv_multip1.setText("00k");tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#0CF115" ));});
+        btn_mult5.setOnClickListener(view -> {tv_multip1.setText("0K"); tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#FFC107" ));});
+        btn_mult6.setOnClickListener(view -> {tv_multip1.setText("M");tv_point.setText(".");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#0CF115" ));});
         btn_mult7.setOnClickListener(view -> {tv_multip1.setText("M");tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#0228FA" ));});
         toleranceOr.setOnClickListener(view -> {tv_pourcentage.setText("+-5%");relativeLayout4.setBackgroundColor(Color.parseColor("#B18603" ));});
         toleranceArgent.setOnClickListener(view -> {tv_pourcentage.setText("+-10%");relativeLayout4.setBackgroundColor(Color.parseColor("#8A8989" ));});

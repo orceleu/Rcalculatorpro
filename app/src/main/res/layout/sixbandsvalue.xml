@@ -8,7 +8,7 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="red"
+                android:text="black"
                 android:textColor="@color/teal_200"/>
         </LinearLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -74,7 +74,7 @@
                 android:background="@drawable/cornerresistance"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.21">
@@ -126,7 +126,7 @@
 
             <View
                 android:id="@+id/divider2"
-                android:layout_width="89dp"
+                android:layout_width="150dp"
                 android:layout_height="5dp"
                 android:background="#86868A"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +136,7 @@
 
             <View
                 android:id="@+id/divider3"
-                android:layout_width="89dp"
+                android:layout_width="150dp"
                 android:layout_height="5dp"
                 android:background="#86868A"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -163,7 +163,6 @@
                 android:id="@+id/selector002"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
                 />
             <Spinner
                 android:id="@+id/tolerancectn002"
@@ -182,9 +181,10 @@
         </LinearLayout>
         <Button
             android:id="@+id/buttonCompute002"
-            android:layout_width="268dp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:text="compute"
             />

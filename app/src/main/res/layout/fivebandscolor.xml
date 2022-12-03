@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FiveBandsColor">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -22,11 +20,11 @@
             <LinearLayout
                 android:id="@+id/linearLayout6"
                 android:layout_width="200dp"
+                android:layout_marginBottom="15dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/cornerresistance"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal"
-                android:layout_marginTop="2dp"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
@@ -73,6 +71,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/textView2"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
                     app:layout_constraintVertical_bias="0.2" />
+
                 <RelativeLayout
                     android:id="@+id/layout05"
                     android:layout_width="14dp"
@@ -115,9 +114,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.486"
                 app:layout_constraintStart_toStartOf="parent">
 
 
@@ -125,56 +123,52 @@
                     android:id="@+id/tv_1band01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:text="@string/_1"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
-                    />
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tv_point_argent01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     tools:layout_editor_absoluteX="74dp"
                     tools:layout_editor_absoluteY="139dp" />
-
 
 
                 <TextView
                     android:id="@+id/tv_2band01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:text="@string/_0"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="145dp" />
+
                 <TextView
                     android:id="@+id/tv_point_or01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     tools:layout_editor_absoluteX="130dp"
                     tools:layout_editor_absoluteY="213dp" />
+
                 <TextView
                     android:id="@+id/tv_3band01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:text="0"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="145dp" />
@@ -184,10 +178,9 @@
                     android:id="@+id/tv_mult01"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:textColor="@color/black"
-                    android:textSize="27sp"
-                    android:textStyle="normal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
                     tools:layout_editor_absoluteX="230dp"
                     tools:layout_editor_absoluteY="145dp" />
 
@@ -195,45 +188,40 @@
                     android:id="@+id/tv_ohms01"
                     android:layout_width="wrap_content"
                     android:layout_height="42dp"
-                    android:layout_marginTop="23dp"
                     android:layout_marginEnd="20dp"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:textStyle="normal" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tv_pourcentage01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:textColor="@color/black"
                     android:layout_marginStart="20dp"
                     android:text="+-5%"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="normal" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <GridLayout
+            <LinearLayout
                 android:id="@+id/gridLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="2dp"
-                android:layout_marginBottom="2dp"
-                android:columnCount="5"
+                android:layout_margin="3dp"
+                android:baselineAligned="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <LinearLayout
                     android:id="@+id/linearLayout4"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
 
@@ -242,14 +230,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:clickable="true"
+                        android:layout_margin="2dp"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#4C1A0B"
+                        android:layout_weight="1"
                         app:cardCornerRadius="7dp" >
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1"
+                            android:text="@string/_1"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@color/white"
@@ -260,7 +250,8 @@
                         android:id="@+id/btn_01band_rouge"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -269,7 +260,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2"
+                            android:text="@string/_2"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@color/white"
@@ -280,7 +271,8 @@
                         android:id="@+id/btn_01band_orange"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -300,8 +292,9 @@
                         android:id="@+id/btn_01band_jaune"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FFC107"
@@ -320,8 +313,9 @@
                         android:id="@+id/btn_01band_vert"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0CF115"
                         app:cardCornerRadius="7dp" >
@@ -339,7 +333,8 @@
                         android:id="@+id/btn_01band_bleu"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -359,8 +354,9 @@
                         android:id="@+id/btn_01band_violet"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#D703FB"
@@ -379,8 +375,9 @@
                         android:id="@+id/btn_01band_gris"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#9C9A9A"
@@ -399,8 +396,9 @@
                         android:id="@+id/btn_01band_blanc"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#E2E6E5"
@@ -420,16 +418,18 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_02band_noir"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0B0303"
@@ -448,9 +448,10 @@
                         android:id="@+id/btn_02band_marron"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#4C1A0B"
                         app:cardCornerRadius="7dp" >
@@ -468,8 +469,9 @@
                         android:id="@+id/btn_02band_rouge"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#F60202"
@@ -488,8 +490,9 @@
                         android:id="@+id/btn_02band_orange"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FF5722"
@@ -508,8 +511,9 @@
                         android:id="@+id/btn_02band_jaune"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FFC107"
@@ -529,9 +533,10 @@
                         android:id="@+id/btn_02band_vert"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0CF115"
                         app:cardCornerRadius="7dp" >
@@ -550,9 +555,10 @@
                         android:id="@+id/btn_02band_bleu"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0228FA"
                         app:cardCornerRadius="7dp" >
@@ -570,8 +576,9 @@
                         android:id="@+id/btn_02band_violet"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#D703FB"
@@ -590,9 +597,10 @@
                         android:id="@+id/btn_02band_gris"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#9C9A9A"
                         app:cardCornerRadius="7dp" >
@@ -610,9 +618,10 @@
                         android:id="@+id/btn_02band_blanc"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#E2E6E5"
                         app:cardCornerRadius="7dp" >
@@ -629,9 +638,9 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/linearLayout03"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
@@ -639,6 +648,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:clickable="true"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0B0303"
@@ -657,7 +668,8 @@
                         android:id="@+id/btn_03band_marron"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -677,7 +689,8 @@
                         android:id="@+id/btn_03band_rouge"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -697,8 +710,9 @@
                         android:id="@+id/btn_03band_orange"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FF5722"
@@ -717,8 +731,9 @@
                         android:id="@+id/btn_03band_jaune"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FFC107"
@@ -738,8 +753,9 @@
                         android:id="@+id/btn_03band_vert"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0CF115"
@@ -759,8 +775,9 @@
                         android:id="@+id/btn_03band_bleu"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0228FA"
@@ -779,8 +796,9 @@
                         android:id="@+id/btn_03band_violet"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#D703FB"
@@ -799,8 +817,9 @@
                         android:id="@+id/btn_03band_gris"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#9C9A9A"
@@ -819,8 +838,9 @@
                         android:id="@+id/btn_03band_blanc"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#E2E6E5"
@@ -840,15 +860,17 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout3"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
                     android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_multiplicator_noir01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -869,8 +891,9 @@
                         android:id="@+id/btn_multiplicator_marron01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#4C1A0B"
@@ -889,8 +912,9 @@
                         android:id="@+id/btn_multiplicator_rouge01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#F60202"
@@ -909,8 +933,9 @@
                         android:id="@+id/btn_multiplicator_orange01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#FF5722"
@@ -929,7 +954,8 @@
                         android:id="@+id/btn_multiplicator_jaune01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -950,7 +976,8 @@
                         android:id="@+id/btn_multiplicator_vert01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -971,8 +998,9 @@
                         android:id="@+id/btn_multiplicator_bleu01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0228FA"
@@ -986,15 +1014,36 @@
                             android:textColor="@color/white"
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_multiplicator_violet01"
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardBackgroundColor="#D703FB"
+                        app:cardCornerRadius="7dp" >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="X10MΩ"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                    </androidx.cardview.widget.CardView>
 
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_point_or01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#B18603"
                         app:cardCornerRadius="7dp" >
@@ -1012,9 +1061,10 @@
                         android:id="@+id/btn_point_argent01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#8A8989"
                         app:cardCornerRadius="7dp" >
@@ -1033,9 +1083,9 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout5"
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="2dp"
                     android:orientation="vertical">
 
 
@@ -1044,6 +1094,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
                         android:clickable="true"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#4C1A0B"
@@ -1062,7 +1114,8 @@
                         android:id="@+id/btn_tolerance_rouge01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -1082,7 +1135,8 @@
                         android:id="@+id/btn_tolerance_orange01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -1102,7 +1156,8 @@
                         android:id="@+id/btn_tolerance_jaune01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -1122,7 +1177,8 @@
                         android:id="@+id/btn_tolerance_vert01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#0CF115"
@@ -1141,7 +1197,8 @@
                         android:id="@+id/btn_tolerance_bleu01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
@@ -1161,8 +1218,9 @@
                         android:id="@+id/btn_tolerance_violet01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#D703FB"
@@ -1181,8 +1239,9 @@
                         android:id="@+id/btn_tolerance_gris01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#9C9A9A"
@@ -1197,33 +1256,16 @@
                             android:layout_gravity="center"/>
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/btn_tolerance_blanc01"
-                        android:layout_width="match_parent"
-                        android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:foreground="?attr/selectableItemBackground"
-                        app:cardBackgroundColor="#E2E6E5"
-                        app:cardCornerRadius="7dp" >
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="+-20"
-                            android:textStyle="bold"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center"/>
-                    </androidx.cardview.widget.CardView>
 
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/btn_prc_or01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
                         android:focusable="true"
+                        android:layout_weight="1"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#B18603"
                         app:cardCornerRadius="7dp">
@@ -1241,8 +1283,9 @@
                         android:id="@+id/btn_prc_argent01"
                         android:layout_width="match_parent"
                         android:layout_height="34dp"
-                        android:layout_marginTop="2dp"
+                        android:layout_margin="2dp"
                         android:clickable="true"
+                        android:layout_weight="1"
                         android:focusable="true"
                         android:foreground="?attr/selectableItemBackground"
                         app:cardBackgroundColor="#8A8989"
@@ -1261,12 +1304,11 @@
 
 
 
-            </GridLayout>
+            </LinearLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
-</FrameLayout>
+
+</LinearLayout>
 
 
 

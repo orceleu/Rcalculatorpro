@@ -173,11 +173,11 @@ public class SixBandsColor extends Fragment {
 
 
         btnmult0_band4.setOnClickListener(view -> {tvmult.setText("");tvPointor.setText("");tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#0B0303" ));});
-        btnmult1_band4.setOnClickListener(view ->{ tvmult.setText("0"); tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#4C1A0B" ));});
-        btnmult2_band4.setOnClickListener(view -> {tvmult.setText("00");tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#F60202" ));});
+        btnmult1_band4.setOnClickListener(view ->{ tvmult.setText("K"); tvPointor.setText(""); tvpointargent.setText(".");layoutmult.setBackgroundColor(Color.parseColor("#4C1A0B" ));});
+        btnmult2_band4.setOnClickListener(view -> {tvmult.setText("K");tvPointor.setText("."); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#F60202" ));});
         btnmult3_band4.setOnClickListener(view -> {tvmult.setText("k");  tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#FF5722"  ));});
-        btnmult4_band4.setOnClickListener(view -> {tvmult.setText("0k"); tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#FFC107" ));});
-        btnmult5_band4.setOnClickListener(view -> {tvmult.setText("00k");tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#0CF115" ));});
+        btnmult4_band4.setOnClickListener(view -> {tvmult.setText("M"); tvPointor.setText(""); tvpointargent.setText(".");layoutmult.setBackgroundColor(Color.parseColor("#FFC107" ));});
+        btnmult5_band4.setOnClickListener(view -> {tvmult.setText("M");tvPointor.setText("."); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#0CF115" ));});
         btnmult6_band4.setOnClickListener(view -> {tvmult.setText("M");tvPointor.setText(""); tvpointargent.setText("");layoutmult.setBackgroundColor(Color.parseColor("#0228FA" ));});
 
 

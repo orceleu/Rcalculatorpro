@@ -178,9 +178,9 @@ public class LED_resistor extends Fragment {
         double resutlOhm = voltsFinal / (intensiteMa * 0.001);
         double nbreWatts = resutlOhm * ((intensiteMa * 0.001) * (intensiteMa * 0.001));
         if (resutlOhm < 1) {
-            return ("tension des LEDs sup. a l'entré");
+            return ("tension de(s) LED(s) sup. a l'entré");
         }
-        return ("*serie...\nResistance: ~" + resutlOhm + " ohm\nPower:  ~" + nbreWatts + " W");
+        return ("serie...\nResistance: ~" + resutlOhm + " ohm\nDissipate power:  ~" + nbreWatts + " W");
 
     }
 
@@ -194,6 +194,6 @@ public class LED_resistor extends Fragment {
         if (calculFinalLedPar < 1) {
             return ("tension trop basse");
         }
-        return ("*Parralele...\nResistance: ~" + calculFinalLedPar + " ohms\nPower: ~" + nbredeWatts + " W");
+        return ("Parrallele...\nResistance: ~" + calculFinalLedPar + " ohms\nDissipate power: ~" + nbredeWatts + " W");
     }
 }

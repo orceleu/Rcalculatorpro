@@ -38,6 +38,7 @@
             android:id="@+id/textView_result_Led"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#F60202"
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:digits="0123456789."
-            android:hint="10ma(def)"
+            android:hint="10ma"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="@+id/editText_nbre_Led"
             app:layout_constraintStart_toStartOf="@+id/editText_nbre_Led"
@@ -81,7 +82,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="numbers of LED:"
+            android:text="nbr of LED:"
             android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@+id/editText_Led_ma"
             app:layout_constraintEnd_toStartOf="@+id/editText_nbre_Led"
@@ -108,7 +109,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:digits="0123456789."
-            android:hint="1 LED(def)"
+            android:hint="1 LED"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="@+id/editText_Led_V"
             app:layout_constraintHorizontal_bias="0.0"
@@ -138,6 +139,15 @@
             app:layout_constraintStart_toEndOf="@+id/editText_nbre_Led"
             app:layout_constraintTop_toTopOf="@+id/editText_Led_ma"
             app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/led"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/compute_Led" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

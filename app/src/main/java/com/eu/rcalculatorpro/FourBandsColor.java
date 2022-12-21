@@ -23,14 +23,7 @@ public class FourBandsColor extends Fragment {
 
     CardView toleranceArgent;
     CardView  toleranceOr;
-    CardView  tolerance1;
-    CardView  tolerance2;
-    CardView  tolerance3;
-    CardView  tolerance4;
-    CardView  tolerance5;
-    CardView  tolerance6;
-    CardView  tolerance7;
-    CardView  tolerance8;
+
 
 
     CardView  pointOr;
@@ -119,14 +112,6 @@ public class FourBandsColor extends Fragment {
 
         toleranceOr=view1.findViewById(R.id.btn_prc_or);
         toleranceArgent=view1.findViewById(R.id.btn_prc_argent);
-        tolerance1=view1.findViewById(R.id.btn_tolerance_marron);
-        tolerance2=view1.findViewById(R.id.btn_tolerance_rouge);
-        tolerance3=view1.findViewById(R.id.btn_tolerance_orange);
-        tolerance4=view1.findViewById(R.id.btn_tolerance_jaune);
-        tolerance5=view1.findViewById(R.id.btn_tolerance_vert);
-        tolerance6=view1.findViewById(R.id.btn_tolerance_bleu);
-        tolerance7=view1.findViewById(R.id.btn_tolerance_violet);
-        tolerance8=view1.findViewById(R.id.btn_tolerance_gris);
 
         pointOr=view1.findViewById(R.id.btn_point_or);
         pointArgent=view1.findViewById(R.id.btn_point_argent);
@@ -190,14 +175,6 @@ public class FourBandsColor extends Fragment {
         btn_mult7.setOnClickListener(view -> {tv_multip1.setText("M");tv_point.setText("");tv_pointGris.setText("");relativeLayout3.setBackgroundColor(Color.parseColor("#0228FA" ));});
         toleranceOr.setOnClickListener(view -> {tv_pourcentage.setText("+-5%");relativeLayout4.setBackgroundColor(Color.parseColor("#B18603" ));});
         toleranceArgent.setOnClickListener(view -> {tv_pourcentage.setText("+-10%");relativeLayout4.setBackgroundColor(Color.parseColor("#8A8989" ));});
-        tolerance1.setOnClickListener(view -> {tv_pourcentage.setText("+-1%");relativeLayout4.setBackgroundColor(Color.parseColor("#4C1A0B" ));});
-        tolerance2.setOnClickListener(view -> {tv_pourcentage.setText("+-2%");relativeLayout4.setBackgroundColor(Color.parseColor("#F60202" ));});
-        tolerance3.setOnClickListener(view -> {tv_pourcentage.setText("+-0.05%");relativeLayout4.setBackgroundColor(Color.parseColor("#FF5722" ));});
-        tolerance4.setOnClickListener(view -> {tv_pourcentage.setText("+-0.02%");relativeLayout4.setBackgroundColor(Color.parseColor("#FFC107" ));});
-        tolerance5.setOnClickListener(view -> {tv_pourcentage.setText("+-0.5%");relativeLayout4.setBackgroundColor(Color.parseColor("#0CF115" ));});
-        tolerance6.setOnClickListener(view -> {tv_pourcentage.setText("+-0.25%");relativeLayout4.setBackgroundColor(Color.parseColor("#0228FA" ));});
-        tolerance7.setOnClickListener(view -> {tv_pourcentage.setText("+-0.1%");relativeLayout4.setBackgroundColor(Color.parseColor("#D703FB" ));});
-        tolerance8.setOnClickListener(view -> {tv_pourcentage.setText("+-0.01");relativeLayout4.setBackgroundColor(Color.parseColor("#9C9A9A" ));});
 
 
         tv_ohms1.setText("Ω");

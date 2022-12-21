@@ -1,5 +1,6 @@
 package com.eu.rcalculatorpro;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -124,7 +125,7 @@ public class LED_resistor extends Fragment {
         name_Led.add("LED_red");
         name_Led.add("LED_blue");
         name_Led.add("LED_green");
-        name_Led.add("LED_jaunt");
+        name_Led.add("LED_yellow");
         name_Led.add("LED_white");
         name_Led.add("1W (white)");
         ArrayAdapter<String> arrayAdapter01 = new ArrayAdapter<>(getActivity(), R.layout.bolditem, name_Led);
@@ -137,25 +138,31 @@ public class LED_resistor extends Fragment {
                 switch (i) {
                     case 0:
                         V_type_de_Led = 1.8;
+                        editText_ma.setText("10");
                         break;
                     case 1:
                         V_type_de_Led = 3.6;
+                        editText_ma.setText("10");
                         break;
 
                     case 2:
                         V_type_de_Led = 3.5;
+                        editText_ma.setText("10");
                         break;
 
                     case 3:
                         V_type_de_Led = 2.2;
+                        editText_ma.setText("10");
                         break;
 
                     case 4:
                         V_type_de_Led = 4;
+                        editText_ma.setText("10");
                         break;
                     case 5:
                         V_type_de_Led = 3.3;
                         intensiteMa = 330;
+                        editText_ma.setText("330");
                         break;
                 }
             }

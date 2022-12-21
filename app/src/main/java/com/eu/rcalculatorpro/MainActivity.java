@@ -1,12 +1,15 @@
 package com.eu.rcalculatorpro;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -22,6 +25,8 @@ CardView cardView1;
 CardView cardView2;
 CardView smd;
 CardView calculDivers;
+private AlertDialog alertDialog;
+private  AlertDialog.Builder builder;
     private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +81,36 @@ CardView calculDivers;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        if(item.getItemId()==R.id.setting){
-            Toast.makeText(this,"setting selected",Toast.LENGTH_SHORT).show();
+        if(item.getItemId()==R.id.about_us){
+            builder=new AlertDialog.Builder(MainActivity.this   );
+            builder.setTitle("about us");
+            builder.setMessage("Our company * are committed to develop calculator for every field with our best knowledge and accuracy such as for electrical, electronics,etc." +
+                    "Please give us your feedback and suggestions. " +
+                    "Email address: orceleu@gmail.com");
+            builder.setCancelable(true);
+            builder.setPositiveButton("send feedback", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    try{
+
+                        Intent intent = new Intent(Intent.ACTION_SENDTO);
+                        intent.setData(Uri.parse("mailto:"));
+                        String[] to ={"exemple@gmail.com"};
+                        intent.putExtra(Intent.EXTRA_EMAIL,to);
+                        intent.putExtra(Intent.EXTRA_SUBJECT,"give me your feedback");
+                        intent.putExtra(Intent.EXTRA_TEXT,"here");
+                        startActivity(Intent.createChooser(intent,"send email"));
+
+
+
+
+                    }catch (Exception e){e.printStackTrace();}
+
+                }
+            });
+            alertDialog=builder.create();
+            alertDialog.show();
+
         }else if(item.getItemId()==R.id.rate) {
             Toast.makeText(this, "rate", Toast.LENGTH_SHORT).show();
         }else if(item.getItemId()==R.id.share) {

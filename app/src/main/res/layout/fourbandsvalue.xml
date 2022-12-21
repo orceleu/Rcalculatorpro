@@ -98,7 +98,7 @@
 
             <View
                 android:id="@+id/divider2"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="5dp"
                 android:background="#86868A"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -108,7 +108,7 @@
 
             <View
                 android:id="@+id/divider3"
-                android:layout_width="200dp"
+                android:layout_width="150dp"
                 android:layout_height="5dp"
                 android:background="#86868A"
                 app:layout_constraintBottom_toBottomOf="parent"
